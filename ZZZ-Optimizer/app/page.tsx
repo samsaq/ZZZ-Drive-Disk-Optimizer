@@ -9,7 +9,7 @@ import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 text-white">
       <div className="inline-block max-w-lg text-center justify-center">
         <h1 className={title()}>Make&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
@@ -23,17 +23,6 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
         <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}

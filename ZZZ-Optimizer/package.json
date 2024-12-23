@@ -22,11 +22,13 @@
 		"@nextui-org/theme": "2.2.9",
 		"@react-aria/ssr": "3.9.4",
 		"@react-aria/visually-hidden": "3.8.12",
+		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"clsx": "2.1.1",
 		"framer-motion": "~11.1.1",
 		"intl-messageformat": "^10.5.0",
 		"next": "14.2.4",
 		"next-themes": "^0.2.1",
+		"postcss-import": "^16.1.0",
 		"react": "18.3.1",
 		"react-dom": "18.3.1"
 	},
@@ -47,7 +49,7 @@
 		"eslint-plugin-react": "^7.23.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-unused-imports": "^3.2.0",
-		"postcss": "8.4.38",
+		"postcss": "^8.4.38",
 		"tailwind-variants": "0.1.20",
 		"tailwindcss": "3.4.3",
 		"typescript": "5.0.4"

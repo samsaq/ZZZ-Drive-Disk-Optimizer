@@ -1,5 +1,7 @@
-import CRTStyles from "@/styles/crt.module.css";
+import "@/styles/altCRTEffect.css";
 
-export default function CRTEffect({ children }: { children: React.ReactNode }) {
-  return <div className={CRTStyles.crt}>{children}</div>;
+export default function CRTEffect({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return <div className="bgEffectCRT">{children}</div>;
 }
