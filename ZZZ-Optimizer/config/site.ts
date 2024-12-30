@@ -12,5 +12,6 @@ export const siteConfig = {
   navMenuItems: [],
   links: {
     github: "https://github.com/samsaq",
+    scanner: "https://github.com/samsaq/ZZZ-Drive-Disk-Scanner",
   },
 };

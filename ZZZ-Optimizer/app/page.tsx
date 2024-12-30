@@ -1,44 +1,29 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
-
+import { TextArt } from "@/components/textArt";
+import { ShinyButton } from "@/components/shinyButton";
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
+  const ZZZ =
+    " ________  ________  ________     \n|\\_____  \\|\\_____  \\|\\_____  \\    \n \\|___/  /|\\|___/  /|\\|___/  /|   \n     /  / /    /  / /    /  / /   \n    /  /_/__  /  /_/__  /  /_/__  \n   |\\________\\\\________\\\\________\\\n    \\|_______|\\|_______|\\|_______|";
+
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 text-white">
+    <section className=" h-full w-full flex flex-col items-center justify-center gap-4 py-8 md:py-10 text-white">
       <div className="inline-block max-w-lg text-center justify-center">
-        <h1 className={title()}>Make&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-        <br />
-        <h1 className={title()}>
-          websites regardless of your design experience.
-        </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </h2>
+        <TextArt className="text-xl" label="ZZZ" text={ZZZ} />
       </div>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+      <div className="flex flex-col gap-3">
+        <span className="text-4xl font-DOS text-center">Optimizer</span>
+        <ShinyButton
+          text="Upload Drive Disk Data"
+          textClasses="text-2xl font-DOS"
+        />
+        <a
+          className="text-sm font-DOS text-center -mt-2 underline decoration-dotted decoration-white decoration-2 underline-offset-4"
+          href={siteConfig.links.scanner}
         >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
+          Don&apos;t have a drive disk scan?
+        </a>
       </div>
     </section>
   );

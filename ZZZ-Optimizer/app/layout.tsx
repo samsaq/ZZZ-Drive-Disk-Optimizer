@@ -1,11 +1,12 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import localFont from "next/font/local";
 
 import { Providers } from "./providers";
 
+import { NavBar } from "@/components/navBar";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
 import CRTOverlay from "@/components/CRTOverlay";
 import CRTEffect from "@/components/CRTEffect";
 
@@ -27,25 +28,35 @@ export const viewport: Viewport = {
   ],
 };
 
+const fontIBM = localFont({
+  src: "../public/fonts/Web437_IBM_BIOS.woff",
+  variable: "--font-IBM",
+});
+
+const fontDOS = localFont({
+  src: "../public/fonts/Perfect_DOS_VGA_437_Win.ttf",
+  variable: "--font-DOS",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
+    <html
+      suppressHydrationWarning
+      className={`${fontIBM.variable} ${fontDOS.variable}`}
+      lang="en"
+    >
       <head />
-      <body
-        className={clsx(
-          "min-h-screen bg-black font-sans antialiased",
-          fontSans.variable
-        )}
-      >
+      <body className={clsx("min-h-screen bg-black font-sans antialiased")}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="container mx-auto max-w-7xl py-10 px-6 flex-grow">
               <CRTEffect>
-                <div className={`relative z-10`}>{children}</div>
+                <NavBar />
+                <div className={`relative h-full w-full`}>{children}</div>
               </CRTEffect>
               <CRTOverlay />
             </main>

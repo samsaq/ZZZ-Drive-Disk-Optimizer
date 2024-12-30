@@ -2,7 +2,7 @@
 
 :root {
   --crt-rgb-intensity: 0.02; /* intensity value for horizontal scanlines' color separation */
-  --crt-bw-intensity: 0.75; /* intensity value for vertical scanlines' black-white banding */
+  --crt-bw-intensity: 0.15; /* intensity value for vertical scanlines' black-white banding */
   --crt-flicker-intensity: 0.1; /* intensity value for flicker effect */
   --crt-vert-scanline-size: 2vh; /* size of vertical scanlines */
   --crt-horz-scanline-size: 2vh; /* size of horizontal scanlines */
