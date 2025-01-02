@@ -7,13 +7,13 @@ import CRTStyles from "@/styles/crt.module.css";
 export default function CRTOverlay() {
   return (
     <>
-      <div
-        className={`absolute inset-0 pointer-events-none overflow-hidden z-50`}
-      >
+      {/* CRT Mask - stays on very top */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[60]">
         <Image fill alt="CRT Monitor Mask" src="/crt_amber_mask.png" />
       </div>
+      {/* CRT Effect - goes between mask and content */}
       <div
-        className={`absolute inset-0 pointer-events-none overflow-hidden ${CRTStyles.crt}`}
+        className={`absolute inset-0 pointer-events-none overflow-hidden z-[40] ${CRTStyles.crt}`}
       />
     </>
   );

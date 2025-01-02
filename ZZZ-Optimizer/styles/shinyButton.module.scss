@@ -1,7 +1,7 @@
 /* CSS needed to animate the button */
 @use "sass:math";
 
-$anim-duration: 5;
+$anim-duration: 4;
 $anim-speed: 0.75;
 
 .shineButton {
@@ -39,6 +39,6 @@ $anim-speed: 0.75;
 
 .animateShine {
   &::before {
-    animation: shine 5s ease-in-out infinite;
+    animation: shine 4s ease-in-out infinite;
   }
 }

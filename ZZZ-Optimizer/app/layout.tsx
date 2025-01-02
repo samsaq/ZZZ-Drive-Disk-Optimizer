@@ -52,15 +52,15 @@ export default function RootLayout({
       <head />
       <body className={clsx("min-h-screen bg-black font-sans antialiased")}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-7xl py-10 px-6 flex-grow">
-              <CRTEffect>
+          <CRTEffect>
+            <div className="relative flex flex-col h-screen">
+              <main className="container mx-auto max-w-7xl py-10 px-6 flex-grow">
                 <NavBar />
                 <div className={`relative h-full w-full`}>{children}</div>
-              </CRTEffect>
-              <CRTOverlay />
-            </main>
-          </div>
+              </main>
+            </div>
+          </CRTEffect>
+          <CRTOverlay />
         </Providers>
       </body>
     </html>
