@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import CRTEffect from "@/components/CRTOverlay";
 
 //Creates a window that is draggable in the style of a OS program to serve as an aesthetically appropriate modal
 
@@ -47,7 +46,7 @@ export function OSWindow({
   titleClassName,
   titleBarClassName,
   closeButtonClassName,
-}: OSWindowProps) {
+}: Readonly<OSWindowProps>) {
   const [windowPosition, setWindowPosition] =
     useState<Position>(defaultPosition);
   const [isDragging, setIsDragging] = useState(false);
@@ -209,7 +208,7 @@ export function OSWindow({
     <div
       ref={windowRef}
       className={cn(
-        "fixed z-[50] min-w-[300px] border border-gray-300 bg-background shadow-lg",
+        "fixed z-[30] min-w-[300px] border border-gray-300 bg-background shadow-lg bgEffectCRT",
         className,
         !isPositioned && "opacity-0" // Hide window until positioned
       )}
