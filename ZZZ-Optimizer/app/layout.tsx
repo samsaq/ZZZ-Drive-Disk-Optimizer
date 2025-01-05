@@ -9,6 +9,7 @@ import { NavBar } from "@/components/navBar";
 import { siteConfig } from "@/config/site";
 import CRTOverlay from "@/components/CRTOverlay";
 import CRTEffect from "@/components/CRTEffect";
+import AuthProvider from "@/components/providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: {
@@ -52,15 +53,17 @@ export default function RootLayout({
       <head />
       <body className={clsx("min-h-screen bg-black font-sans antialiased")}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <CRTEffect>
-            <div className="relative flex flex-col h-screen">
-              <main className="container mx-auto max-w-7xl py-10 px-6 flex-grow">
-                <NavBar />
-                <div className={`relative h-full w-full`}>{children}</div>
-              </main>
-            </div>
-          </CRTEffect>
-          <CRTOverlay />
+          <AuthProvider>
+            <CRTEffect>
+              <div className="relative flex h-screen flex-col">
+                <main className="container mx-auto max-w-7xl flex-grow px-6 py-10">
+                  <NavBar />
+                  <div className={`relative h-full w-full`}>{children}</div>
+                </main>
+              </div>
+            </CRTEffect>
+            <CRTOverlay />
+          </AuthProvider>
         </Providers>
       </body>
     </html>

@@ -1,0 +1,63 @@
+//API route for handling login & account creation (auth is handled via next-auth)
+
+import { authConfig } from "@/lib/auth";
+import { getServerSession } from "next-auth";
+import { NextRequest, NextResponse } from "next/server";
+import { db } from "@/db/db";
+import { userTable } from "@/db/schema";
+import { eq } from "drizzle-orm";
+
+//Handles getting a uuid we can use to fetch user data by
+//creating a new user if they don't exist or just grabbing their uuid if they do
+export async function POST(request: NextRequest) {
+  //for now, we're assuming all our OAuth options allow give us an email to work with
+  const session = await getServerSession(authConfig);
+  const userEmail = session?.user?.email;
+
+  if (!session?.user) {
+    return NextResponse.json(
+      { error: "Unauthorized / Not logged in" },
+      { status: 401 },
+    );
+  }
+
+  //throw an error if the user doesn't have an email
+  if (!userEmail) {
+    return NextResponse.json(
+      { error: "Account has no email" },
+      { status: 401 },
+    );
+  }
+
+  //Check if the user already exists
+  const user = await db
+    .select()
+    .from(userTable)
+    .where(eq(userTable.userEmail, userEmail))
+    .limit(1);
+
+  // If user exists, return early
+  if (user && user.length > 0 && user[0]?.userEmail) {
+    console.log("User exists, returning uuid");
+    return NextResponse.json({ uuid: user[0].userEmail });
+  }
+
+  // User doesn't exist, create new user
+  const newUser = await db
+    .insert(userTable)
+    .values({
+      userEmail: userEmail,
+    })
+    .returning();
+
+  console.log("New user created:", newUser);
+
+  if (newUser[0]?.userEmail) {
+    return NextResponse.json({ uuid: newUser[0].userEmail });
+  }
+
+  return NextResponse.json(
+    { error: "Failed to create/retrieve user" },
+    { status: 500 },
+  );
+}

@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  sassOptions: {
+    logger: {
+      api: "modern",
+    },
+    silenceDeprecations: ["legacy-js-api"],
+  },
+};
 
 module.exports = nextConfig;

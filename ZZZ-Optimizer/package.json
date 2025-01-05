@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
     "@nextui-org/button": "2.0.37",
     "@nextui-org/code": "2.0.32",
     "@nextui-org/input": "2.2.4",
@@ -26,6 +27,8 @@
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.3",
     "framer-motion": "~11.1.1",
     "intl-messageformat": "^10.5.0",
     "jotai": "^2.8.0",
@@ -38,7 +41,9 @@
     "react-dom": "18.3.1",
     "sass": "^1.83.0",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@iconify/react": "^5.1.0",
@@ -48,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
     "autoprefixer": "10.4.19",
+    "drizzle-kit": "^0.30.1",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.1",
     "eslint-config-prettier": "^8.2.0",
@@ -59,9 +65,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^3.2.0",
     "postcss": "^8.4.38",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwind-variants": "0.1.20",
     "tailwindcss": "3.4.3",
     "tailwindcss-motion": "^1.0.0",
+    "tsx": "^4.19.2",
     "typescript": "5.0.4"
   }
 }
