@@ -1,0 +1,6674 @@
+[
+    {
+        "set_name": "Inferno Metal",
+        "partition_number": "1",
+        "drive_rarity": "B",
+        "drive_current_level": "9",
+        "drive_max_level": "9",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "732",
+        "drive_base_stat_combined": "HP 732",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "0.8%"
+            ],
+            [
+                "Anomaly Proficiency",
+                3.0
+            ],
+            [
+                "ATK",
+                "1%"
+            ],
+            [
+                "CRIT DMG",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "CRIT DMG+1",
+                "9.6%"
+            ],
+            [
+                "CRIT Rate+1",
+                4.8
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "ATK+1",
+                "6%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "CRIT Rate+1",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK+1",
+                "6%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Puffer Electro",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "ATK+2",
+                57.0
+            ],
+            [
+                "CRIT DMG+1",
+                "9.6%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Shockstar Disco",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "CRIT DMG+2",
+                "14.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "2200",
+        "drive_base_stat_combined": "HP 2,200",
+        "random_stats": [
+            [
+                "DEF+1",
+                "9.6%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG+3",
+                "19.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "12",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "1870",
+        "drive_base_stat_combined": "HP 1,870",
+        "random_stats": [
+            [
+                "ATK+2",
+                "9%"
+            ],
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "1468",
+        "drive_base_stat_combined": "HP 1,468",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "ATK+1",
+                "4%"
+            ],
+            [
+                "HP+1",
+                "4%"
+            ],
+            [
+                "DEF+1",
+                20.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "1468",
+        "drive_base_stat_combined": "HP 1,468",
+        "random_stats": [
+            [
+                "ATK+1",
+                "4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "DEF+2",
+                30.0
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaotic Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaotic Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Thunder Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Thunder Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "1",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "550",
+        "drive_base_stat_combined": "HP 550",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "PEN",
+                6.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "ATK",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "PEN",
+                6.0
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "PEN",
+                6.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "ATK",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "1",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "367",
+        "drive_base_stat_combined": "HP 367",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Inferno Metal",
+        "partition_number": "2",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "212",
+        "drive_base_stat_combined": "ATK 212",
+        "random_stats": [
+            [
+                "CRIT Rate+1",
+                "3.2%"
+            ],
+            [
+                "PEN+1",
+                12.0
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN+1",
+                18.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "ATK+3",
+                "12%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "PEN+2",
+                27.0
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "CRIT Rate+1",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "CRIT DMG+1",
+                "9.6%"
+            ],
+            [
+                "DEF+2",
+                45.0
+            ],
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Puffer Electro",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "HP+1",
+                224.0
+            ],
+            [
+                "PEN+1",
+                18.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Shockstar Disco",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "DEF+2",
+                45.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "PEN+2",
+                27.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ],
+            [
+                "DEF+1",
+                30.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "316",
+        "drive_base_stat_combined": "ATK 316",
+        "random_stats": [
+            [
+                "HP+1",
+                224.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "12",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "268",
+        "drive_base_stat_combined": "ATK 268",
+        "random_stats": [
+            [
+                "CRIT DMG+2",
+                "14.4%"
+            ],
+            [
+                "DEF+1",
+                30.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "2",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "212",
+        "drive_base_stat_combined": "ATK 212",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "CRIT Rate+2",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "2",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "79",
+        "drive_base_stat_combined": "ATK 79",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "3",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "124",
+        "drive_base_stat_combined": "DEF 124",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "CRIT DMG+3",
+                "12.8%"
+            ],
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "HP",
+                75.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ],
+            [
+                "ATK+1",
+                "6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate+1",
+                4.8
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "HP+3",
+                448.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP+2",
+                336.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "CRIT DMG+2",
+                "14.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "ATK+3",
+                "12%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "184",
+        "drive_base_stat_combined": "DEF 184",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP+2",
+                "9%"
+            ],
+            [
+                "DEF+2",
+                "14.4%"
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "14",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "174",
+        "drive_base_stat_combined": "DEF 174",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "CRIT Rate+1",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "12",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "156",
+        "drive_base_stat_combined": "DEF 156",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP+1",
+                "6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "3",
+        "drive_rarity": "B",
+        "drive_current_level": "6",
+        "drive_max_level": "9",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "45",
+        "drive_base_stat_combined": "DEF 45",
+        "random_stats": [
+            [
+                "ATK",
+                6.0
+            ],
+            [
+                "HP",
+                "1%"
+            ],
+            [
+                "PEN",
+                3.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "3",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "46",
+        "drive_base_stat_combined": "DEF 46",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Inferno Metal",
+        "partition_number": "4",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "CRIT Rate",
+        "drive_base_stat_number": "16.0%",
+        "drive_base_stat_combined": "CRIT Rate 16%",
+        "random_stats": [
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "ATK+1",
+                "4%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "PEN+1",
+                12.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT Rate",
+        "drive_base_stat_number": "24.0%",
+        "drive_base_stat_combined": "CRIT Rate 24%",
+        "random_stats": [
+            [
+                "PEN+3",
+                36.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "DEF+1",
+                30.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Proficiency",
+        "drive_base_stat_number": "92.0%",
+        "drive_base_stat_combined": "Anomaly Proficiency 92",
+        "random_stats": [
+            [
+                "ATK+1",
+                "6%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate+3",
+                "9.6%"
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT Rate",
+        "drive_base_stat_number": "24.0%",
+        "drive_base_stat_combined": "CRIT Rate 24%",
+        "random_stats": [
+            [
+                "CRIT DMG+1",
+                "9.6%"
+            ],
+            [
+                "ATK+1",
+                38.0
+            ],
+            [
+                "PEN+1",
+                18.0
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Proficiency",
+        "drive_base_stat_number": "92.0%",
+        "drive_base_stat_combined": "Anomaly Proficiency 92",
+        "random_stats": [
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "ATK+2",
+                "9%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "12",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Proficiency",
+        "drive_base_stat_number": "78.19999999999999%",
+        "drive_base_stat_combined": "Anomaly Proficiency 78",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP+1",
+                224.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP+2",
+                "9%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Shockstar Disco",
+        "partition_number": "4",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "32.0%",
+        "drive_base_stat_combined": "CRIT DMG 32%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "PEN+1",
+                12.0
+            ],
+            [
+                "DEF+1",
+                20.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "4",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Proficiency",
+        "drive_base_stat_number": "60.0%",
+        "drive_base_stat_combined": "Anomaly Proficiency 60",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "DEF+1",
+                20.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "CRIT Rate+1",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "4",
+        "drive_rarity": "A",
+        "drive_current_level": "7",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "13.75%",
+        "drive_base_stat_combined": "ATK 13.8%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 75%",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Proficiency",
+        "drive_base_stat_number": "23.0%",
+        "drive_base_stat_combined": "Anomaly Proficiency 23",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT Rate",
+        "drive_base_stat_number": "6.0%",
+        "drive_base_stat_combined": "CRIT Rate 6%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "4",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "CRIT DMG",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "CRIT DMG 12%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Inferno Metal",
+        "partition_number": "5",
+        "drive_rarity": "B",
+        "drive_current_level": "9",
+        "drive_max_level": "9",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "10.0%",
+        "drive_base_stat_combined": "ATK 10%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                3.0
+            ],
+            [
+                "PEN",
+                3.0
+            ],
+            [
+                "CRIT DMG",
+                "1.6%"
+            ],
+            [
+                "CRIT Rate",
+                "0.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Ice DMG Bonus",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "Ice DMG Bonus 30%",
+        "random_stats": [
+            [
+                "CRIT DMG+1",
+                "9.6%"
+            ],
+            [
+                "HP+2",
+                336.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF+1",
+                30.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "ATK 30%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF+1",
+                30.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP+1",
+                "6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "PEN Ratio",
+        "drive_base_stat_number": "24.0%",
+        "drive_base_stat_combined": "PEN Ratio 24%",
+        "random_stats": [
+            [
+                "HP+1",
+                224.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG+2",
+                "14.4%"
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "ATK 30%",
+        "random_stats": [
+            [
+                "CRIT Rate+2",
+                "7.2%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "DEF+3",
+                "19.2%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "5",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Electric DMG Bonus",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "Electric DMG Bonus 20%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "HP+1",
+                "4%"
+            ],
+            [
+                "ATK+2",
+                "6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "5",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Physical DMG Bonus",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "Physical DMG Bonus 20%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "HP+1",
+                "4%"
+            ],
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "DEF+2",
+                30.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "5",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Physical DMG Bonus",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "Physical DMG Bonus 20%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF+1",
+                "6.4%"
+            ],
+            [
+                "CRIT Rate+1",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "6",
+        "drive_max_level": "15",
+        "drive_base_stat": "Electric DMG Bonus",
+        "drive_base_stat_number": "16.5%",
+        "drive_base_stat_combined": "Electric DMG Bonus 16.5%",
+        "random_stats": [
+            [
+                "HP+1",
+                224.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "5",
+        "drive_rarity": "A",
+        "drive_current_level": "3",
+        "drive_max_level": "12",
+        "drive_base_stat": "Electric DMG Bonus",
+        "drive_base_stat_number": "8.75%",
+        "drive_base_stat_combined": "Electric DMG Bonus = 8.8%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Physical DMG Bonus",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Physical DMG Bonus 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 75%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Ice DMG Bonus",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ice DMG Bonus 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Fire DMG Bonus",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Fire DMG Bonus 7.5%",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Electric DMG Bonus",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Electric DMG Bonus = 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Electric DMG Bonus",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Electric DMG Bonus = 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "PEN Ratio",
+        "drive_base_stat_number": "6.0%",
+        "drive_base_stat_combined": "PEN Ratio 6%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "5",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "PEN Ratio",
+        "drive_base_stat_number": "6.0%",
+        "drive_base_stat_combined": "PEN Ratio 6x",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "ATK 20%",
+        "random_stats": [
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "DEF+2",
+                "9.6%"
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 30%",
+        "random_stats": [
+            [
+                "HP+1",
+                "6%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "DEF+1",
+                "9.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Woodpecker Electro",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 30%",
+        "random_stats": [
+            [
+                "ATK+1",
+                "6%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "ATK+2",
+                57.0
+            ],
+            [
+                "HP+1",
+                224.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "30.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 30%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK+2",
+                "9%"
+            ],
+            [
+                "DEF+2",
+                "14.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "15",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "18.0%",
+        "drive_base_stat_combined": "Impact 18%",
+        "random_stats": [
+            [
+                "ATK+2",
+                57.0
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF+2",
+                "14.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Shockstar Disco",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "impact 12%",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "DEF+2",
+                "9.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Shockstar Disco",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "impact 12%",
+        "random_stats": [
+            [
+                "HP+1",
+                150.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "PEN+1",
+                12.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 20%",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "HP+1",
+                150.0
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "20.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 20%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF+1",
+                "6.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "12",
+        "drive_max_level": "12",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "40.0%",
+        "drive_base_stat_combined": "Energy Regen 40%",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "CRIT Rate+1",
+                "3.2%"
+            ],
+            [
+                "HP+1",
+                150.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaotic Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "9",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "21.0%",
+        "drive_base_stat_combined": "ATK 21%",
+        "random_stats": [
+            [
+                "PEN+1",
+                18.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP+1",
+                "6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                4.8
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 75%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 75%",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 7.5%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "Impact 45%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaos Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "PEN",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "DEF",
+                "4.8%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Proto Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 75%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Freedom Blues",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "ATK 7.5%",
+        "random_stats": [
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "impact 4.5%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 7.5%",
+        "random_stats": [
+            [
+                "PEN",
+                9.0
+            ],
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "HP 75%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                9.0
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "HP",
+                112.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Hormone Punk",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "2.4%"
+            ],
+            [
+                "ATK",
+                19.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaotic Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "12.0%",
+        "drive_base_stat_combined": "DEF 12%",
+        "random_stats": [
+            [
+                "ATK",
+                "3%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Chaotic Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "Anomaly Proficiency",
+                9.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "15.0%",
+        "drive_base_stat_combined": "Energy Regen 15%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "CRIT DMG",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "CRIT Rate",
+                "2.4%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "7.5%",
+        "drive_base_stat_combined": "Anomaly Mastery 7.5%",
+        "random_stats": [
+            [
+                "HP",
+                112.0
+            ],
+            [
+                "HP",
+                "3%"
+            ],
+            [
+                "ATK",
+                19.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Fanged Metal",
+        "partition_number": "6",
+        "drive_rarity": "S",
+        "drive_current_level": "0",
+        "drive_max_level": "15",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "4.5%",
+        "drive_base_stat_combined": "Impact 45%",
+        "random_stats": [
+            [
+                "DEF",
+                "4.8%"
+            ],
+            [
+                "DEF",
+                15.0
+            ],
+            [
+                "HP",
+                "3%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "HP 5%",
+        "random_stats": [
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "HP 5%",
+        "random_stats": [
+            [
+                "PEN",
+                6.0
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "HP",
+                75.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "HP 5%",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "ATK 5%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "10.0%",
+        "drive_base_stat_combined": "Energy Regen 10%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "10.0%",
+        "drive_base_stat_combined": "Energy Regen 10%",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "Impact 3%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "HP",
+                75.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "HP 5%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 5%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "8.0%",
+        "drive_base_stat_combined": "DEF 8%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Branch & Blade Song",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "Impact 3%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "impact 3%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "impact 3%",
+        "random_stats": [
+            [
+                "CRIT DMG",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "HP",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "HP 5%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "8.0%",
+        "drive_base_stat_combined": "DEF 8%",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "ATK 5%",
+        "random_stats": [
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "DEF",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "impact 3%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "8.0%",
+        "drive_base_stat_combined": "DEF 8%",
+        "random_stats": [
+            [
+                "PEN",
+                6.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "10.0%",
+        "drive_base_stat_combined": "Energy Regen 10%",
+        "random_stats": [
+            [
+                "ATK",
+                "2%"
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 5%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "8.0%",
+        "drive_base_stat_combined": "DEF 8%",
+        "random_stats": [
+            [
+                "HP",
+                "2%"
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "ATK 5%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 5%",
+        "random_stats": [
+            [
+                "HP",
+                75.0
+            ],
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "DEF",
+                10.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Energy Regen",
+        "drive_base_stat_number": "10.0%",
+        "drive_base_stat_combined": "Energy Regen 10%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "HP",
+                "2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Anomaly Mastery",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "Anomaly Mastery 5%",
+        "random_stats": [
+            [
+                "ATK",
+                13.0
+            ],
+            [
+                "CRIT DMG",
+                "3.2%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Astral Voice",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "DEF",
+        "drive_base_stat_number": "8.0%",
+        "drive_base_stat_combined": "DEF 8%",
+        "random_stats": [
+            [
+                "Anomaly Proficiency",
+                6.0
+            ],
+            [
+                "CRIT Rate",
+                "1.6%"
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "Impact",
+        "drive_base_stat_number": "3.0%",
+        "drive_base_stat_combined": "Impact 3%",
+        "random_stats": [
+            [
+                "CRIT Rate",
+                "1.6%"
+            ],
+            [
+                "ATK",
+                13.0
+            ]
+        ]
+    },
+    {
+        "set_name": "Swing Jazz",
+        "partition_number": "6",
+        "drive_rarity": "A",
+        "drive_current_level": "0",
+        "drive_max_level": "12",
+        "drive_base_stat": "ATK",
+        "drive_base_stat_number": "5.0%",
+        "drive_base_stat_combined": "ATK 5%",
+        "random_stats": [
+            [
+                "DEF",
+                "3.2%"
+            ],
+            [
+                "DEF",
+                10.0
+            ],
+            [
+                "PEN",
+                6.0
+            ]
+        ]
+    }
+]

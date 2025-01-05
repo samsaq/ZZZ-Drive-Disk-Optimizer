@@ -33,6 +33,7 @@ interface OSWindowProps {
   titleClassName?: string;
   titleBarClassName?: string;
   closeButtonClassName?: string;
+  overrideMinWidth?: number;
 }
 
 export function OSWindow({
@@ -46,6 +47,7 @@ export function OSWindow({
   titleClassName,
   titleBarClassName,
   closeButtonClassName,
+  overrideMinWidth,
 }: Readonly<OSWindowProps>) {
   const [windowPosition, setWindowPosition] =
     useState<Position>(defaultPosition);
@@ -204,24 +206,27 @@ export function OSWindow({
     }
   };
 
+  const minWidth = overrideMinWidth ?? 300;
+
   return (
     <div
       ref={windowRef}
       className={cn(
-        "fixed z-[30] min-w-[300px] border border-gray-300 bg-background shadow-lg bgEffectCRT",
+        "windowCRTEffect fixed z-[30] border-2 border-gray-300 bg-background shadow-lg",
         className,
-        !isPositioned && "opacity-0" // Hide window until positioned
+        !isPositioned && "opacity-0", // Hide window until positioned
       )}
       style={{
         left: `${windowPosition.x}px`,
         top: `${windowPosition.y}px`,
+        minWidth: `${minWidth}px`,
       }}
     >
       {/* Title Bar */}
       <div
         className={cn(
-          "flex h-8 cursor-move items-center justify-between border-1 border-gray-300 bg-black px-2",
-          titleBarClassName
+          "flex h-8 cursor-move items-center justify-between border-b-2 border-gray-300 bg-black px-2",
+          titleBarClassName,
         )}
         role="button"
         tabIndex={0}
@@ -232,12 +237,12 @@ export function OSWindow({
         }}
         onMouseDown={handleMouseDown}
       >
-        <div className={cn("text-sm font-DOS text-white", titleClassName)}>
+        <div className={cn("font-DOS text-sm text-white", titleClassName)}>
           {title}
         </div>
         <button
           aria-label="Close window"
-          className={cn("p-1 rounded-none", closeButtonClassName)}
+          className={cn("rounded-none p-1", closeButtonClassName)}
           onClick={onClose}
         >
           <X className="h-4 w-4 text-white" />
