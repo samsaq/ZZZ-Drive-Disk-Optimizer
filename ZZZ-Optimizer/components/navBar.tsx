@@ -10,7 +10,6 @@ import { GithubIcon } from "./icons/GithubIcon";
 import { RedditIcon } from "./icons/RedditIcon";
 import { GoogleIcon } from "./icons/GoogleIcon";
 
-import { isLoggedIn, loginData } from "@/atomsAndStores/atoms";
 import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
@@ -18,8 +17,6 @@ import { useScanStore } from "@/atomsAndStores/useScanStore";
 
 export const NavBar = () => {
   const { data: session } = useSession();
-  const [isUserLoggedIn] = useAtom(isLoggedIn);
-  const [userLoginData, setUserLoginData] = useAtom(loginData);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const loginButtonRef = useRef<HTMLDivElement>(null);
 
@@ -38,9 +35,8 @@ export const NavBar = () => {
     if (loginData.error) {
       console.error("Failed to login:", loginData.error);
     } else {
-      setUserLoginData({ uuid: loginData.uuid });
       setIsLoginModalOpen(false);
-      console.log("User logged in, data set:", userLoginData);
+      console.log("User logged in");
     }
 
     //try to fetch serverside scan data and sync with local data
@@ -61,9 +57,8 @@ export const NavBar = () => {
   }
 
   function handleLogout() {
-    setUserLoginData({ uuid: "" });
     signOut();
-    console.log("User signed out, login data set to empty");
+    console.log("User signed out");
   }
 
   return (
@@ -80,10 +75,10 @@ export const NavBar = () => {
         <Icon
           className="cursor-pointer transition-opacity hover:opacity-75"
           height={48}
-          icon={isUserLoggedIn ? "memory:logout" : "memory:login"}
+          icon={session?.user ? "memory:logout" : "memory:login"}
           width={48}
           onClick={
-            isUserLoggedIn ? handleLogout : () => setIsLoginModalOpen(true)
+            session?.user ? handleLogout : () => setIsLoginModalOpen(true)
           }
         />
       </div>

@@ -10,10 +10,10 @@ import {
 // User Table, just used to track accounts and be referenced by other tables (eg: the disk drive table)
 export const userTable = pgTable("user", {
   id: serial("id").primaryKey(),
-  uuid: uuid("uuid").defaultRandom(),
-  userEmail: text("user_email").notNull(),
+  userEmail: text("user_email").notNull().unique(),
   createdAt: timestamp("created_at").defaultNow(),
   latestUploadTime: timestamp("latest_upload_time"),
+  lastActivity: timestamp("last_activity").defaultNow(),
 });
 
 //Disk Drive table, used to store all user's disk drives

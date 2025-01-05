@@ -42,6 +42,12 @@ export async function GET(request: NextRequest) {
 
     const userId = user[0].id;
 
+    // Update last activity
+    await db
+      .update(userTable)
+      .set({ lastActivity: new Date() })
+      .where(eq(userTable.id, userId));
+
     // Get all disk drives for the user
     const drives = await db
       .select()

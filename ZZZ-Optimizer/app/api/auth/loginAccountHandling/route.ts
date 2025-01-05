@@ -36,39 +36,28 @@ export async function POST(request: NextRequest) {
     .where(eq(userTable.userEmail, userEmail))
     .limit(1);
 
-  console.log("Existing user found:", user);
-
-  //if the user doesn't exist, create a new user
-  if (!user || user.length === 0) {
-    //we just need to populate the email, everything else is auto-generated or added at upload time
-    const newUser = await db
-      .insert(userTable)
-      .values({
-        userEmail: userEmail,
-      })
-      .returning();
-
-    console.log("New user created:", newUser);
-
-    if (newUser[0]?.uuid) {
-      return NextResponse.json({ uuid: newUser[0].uuid });
-    } else {
-      console.log("Failed to create user");
-      return NextResponse.json(
-        { error: "Failed to create user" },
-        { status: 500 },
-      );
-    }
+  // If user exists, return early
+  if (user && user.length > 0 && user[0]?.userEmail) {
+    console.log("User exists, returning uuid");
+    return NextResponse.json({ uuid: user[0].userEmail });
   }
 
-  //if the user already exists, just set the login data
-  else if (user[0]?.uuid) {
-    return NextResponse.json({ uuid: user[0].uuid });
-  } else {
-    console.log("Failed to get user uuid");
-    return NextResponse.json(
-      { error: "Failed to get user uuid" },
-      { status: 500 },
-    );
+  // User doesn't exist, create new user
+  const newUser = await db
+    .insert(userTable)
+    .values({
+      userEmail: userEmail,
+    })
+    .returning();
+
+  console.log("New user created:", newUser);
+
+  if (newUser[0]?.userEmail) {
+    return NextResponse.json({ uuid: newUser[0].userEmail });
   }
+
+  return NextResponse.json(
+    { error: "Failed to create/retrieve user" },
+    { status: 500 },
+  );
 }
