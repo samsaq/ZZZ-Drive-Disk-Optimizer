@@ -10,10 +10,11 @@ import { GithubIcon } from "./icons/GithubIcon";
 import { RedditIcon } from "./icons/RedditIcon";
 import { GoogleIcon } from "./icons/GoogleIcon";
 
-import { isLoggedIn, loginData } from "@/atoms/atoms";
+import { isLoggedIn, loginData } from "@/atomsAndStores/atoms";
 import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
+import { useScanStore } from "@/atomsAndStores/useScanStore";
 
 export const NavBar = () => {
   const { data: session } = useSession();
@@ -30,18 +31,34 @@ export const NavBar = () => {
   }, [session]);
 
   async function handleLogin() {
-    const response = await fetch("/api/auth/loginAccountHandling", {
+    const loginResponse = await fetch("/api/auth/loginAccountHandling", {
       method: "POST",
     });
-    const data = await response.json();
-    console.log("Data:", data);
-    if (data.error) {
-      console.error("Failed to login:", data.error);
+    const loginData = await loginResponse.json();
+    console.log("Data:", loginData);
+    if (loginData.error) {
+      console.error("Failed to login:", loginData.error);
     } else {
-      setUserLoginData({ uuid: data.uuid });
+      setUserLoginData({ uuid: loginData.uuid });
       setIsLoginModalOpen(false);
       console.log("User login data set:", userLoginData);
       console.log("User is logged in:", isUserLoggedIn);
+    }
+
+    //try to fetch serverside scan data and sync with local data
+    //We'll overwrite local data with server data if the server data is newer
+    //NOTE: There really should never be a case where the server data is older than the local data
+    //Unless a user managed to get onto the website and upload data while the server was down somehow
+    //Or they had no internet connection (and how'd they get here then?)
+    try {
+      const scanResponse = await fetch("/api/scans/fetch");
+      const scanData = await scanResponse.json();
+
+      if (!scanData.error) {
+        useScanStore.getState().syncWithServer(scanData);
+      }
+    } catch (error) {
+      console.error("Failed to fetch scan data:", error);
     }
   }
 

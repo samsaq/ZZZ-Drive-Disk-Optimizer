@@ -13,16 +13,20 @@ export async function POST(request: NextRequest) {
   //for now, we're assuming all our OAuth options allow give us an email to work with
   const session = await getServerSession(authConfig);
   const userEmail = session?.user?.email;
+
+  if (!session?.user) {
+    return NextResponse.json(
+      { error: "Unauthorized / Not logged in" },
+      { status: 401 },
+    );
+  }
+
   //throw an error if the user doesn't have an email
   if (!userEmail) {
     return NextResponse.json(
       { error: "Account has no email" },
       { status: 401 },
     );
-  } //NOTE: Temporary & just for testing since I want to confirm every oauth provider gives me an email
-
-  if (!session?.user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   //Check if the user already exists
@@ -35,7 +39,7 @@ export async function POST(request: NextRequest) {
   console.log("Existing user found:", user);
 
   //if the user doesn't exist, create a new user
-  if (user.length === 0) {
+  if (!user || user.length === 0) {
     //we just need to populate the email, everything else is auto-generated or added at upload time
     const newUser = await db
       .insert(userTable)
