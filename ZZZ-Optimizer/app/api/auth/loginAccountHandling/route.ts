@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     .where(eq(userTable.userEmail, userEmail))
     .limit(1);
 
-  console.log("User:", user);
+  console.log("Existing user found:", user);
 
   //if the user doesn't exist, create a new user
   if (user.length === 0) {

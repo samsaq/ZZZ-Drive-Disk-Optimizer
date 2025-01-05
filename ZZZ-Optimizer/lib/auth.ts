@@ -1,10 +1,8 @@
-import { AuthOptions, getServerSession } from "next-auth";
+import { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import RedditProvider from "next-auth/providers/reddit";
 import GitHubProvider from "next-auth/providers/github";
 import DiscordProvider from "next-auth/providers/discord";
-import { redirect, useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
 
 export const authConfig: AuthOptions = {
   providers: [
@@ -27,19 +25,19 @@ export const authConfig: AuthOptions = {
   ],
 };
 
-export async function loginIsRequiredServer(redirectPath: string = "/") {
-  const session = await getServerSession(authConfig);
+// export async function loginIsRequiredServer(redirectPath: string = "/") {
+//   const session = await getServerSession(authConfig);
 
-  if (!session) {
-    return redirect(redirectPath);
-  }
-}
+//   if (!session) {
+//     return redirect(redirectPath);
+//   }
+// }
 
-export function useLoginIsRequiredClient(redirectPath: string = "/") {
-  const session = useSession();
-  const router = useRouter();
+// export function useLoginIsRequiredClient(redirectPath: string = "/") {
+//   const session = useSession();
+//   const router = useRouter();
 
-  if (!session) {
-    router.push(redirectPath);
-  }
-}
+//   if (!session) {
+//     router.push(redirectPath);
+//   }
+// }
