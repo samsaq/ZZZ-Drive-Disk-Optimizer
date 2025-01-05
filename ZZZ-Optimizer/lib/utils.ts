@@ -37,7 +37,7 @@ const valid_base_stats = [
   "CRIT Rate",
   "CRIT DMG",
   "Anomaly Proficiency",
-  "PEN",
+  "PEN Ratio",
   "Physical DMG Bonus",
   "Fire DMG Bonus",
   "Ice DMG Bonus",

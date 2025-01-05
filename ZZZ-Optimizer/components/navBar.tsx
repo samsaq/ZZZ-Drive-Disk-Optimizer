@@ -35,14 +35,12 @@ export const NavBar = () => {
       method: "POST",
     });
     const loginData = await loginResponse.json();
-    console.log("Data:", loginData);
     if (loginData.error) {
       console.error("Failed to login:", loginData.error);
     } else {
       setUserLoginData({ uuid: loginData.uuid });
       setIsLoginModalOpen(false);
-      console.log("User login data set:", userLoginData);
-      console.log("User is logged in:", isUserLoggedIn);
+      console.log("User logged in, data set:", userLoginData);
     }
 
     //try to fetch serverside scan data and sync with local data
