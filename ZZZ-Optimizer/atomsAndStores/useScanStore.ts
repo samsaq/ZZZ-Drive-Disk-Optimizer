@@ -11,11 +11,12 @@ interface ScanStore {
     lastUploadTime: string;
   }) => void;
   clear: () => void;
+  hasLocalData: () => boolean;
 }
 
 export const useScanStore = create<ScanStore>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       diskScans: [],
       lastUploadTime: null,
       setScans: (jsonData) => {
@@ -42,6 +43,9 @@ export const useScanStore = create<ScanStore>()(
         });
       },
       clear: () => set({ diskScans: [], lastUploadTime: null }),
+      hasLocalData: () => {
+        return get().diskScans.length > 0;
+      },
     }),
     {
       name: "disk-scan-storage",

@@ -1,9 +1,13 @@
+"use client";
+
 import { TextArt } from "@/components/textArt";
 import { siteConfig } from "@/config/site";
 import { UploadButton } from "@/components/uploadButton";
 import { ScanDataTerminalOutput } from "@/components/scanDataTerminalOutput";
+import { useScanStore } from "@/atomsAndStores/useScanStore";
 
 export default function Home() {
+  const hasLocalData = useScanStore((state) => state.hasLocalData());
   const ZZZ =
     " ________  ________  ________     \n|\\_____  \\|\\_____  \\|\\_____  \\    \n \\|___/  /|\\|___/  /|\\|___/  /|   \n     /  / /    /  / /    /  / /   \n    /  /_/__  /  /_/__  /  /_/__  \n   |\\________\\\\________\\\\________\\\n    \\|_______|\\|_______|\\|_______|";
 
@@ -17,12 +21,6 @@ export default function Home() {
         <div className="flex flex-col gap-3">
           <span className="text-center font-DOS text-4xl">Optimizer</span>
           <UploadButton />
-          <a
-            className="-mt-2 text-center font-DOS text-sm underline decoration-white decoration-dotted decoration-2 underline-offset-4"
-            href={siteConfig.links.scanner}
-          >
-            Don&apos;t have a drive disk scan?
-          </a>
         </div>
       </section>
       <ScanDataTerminalOutput />

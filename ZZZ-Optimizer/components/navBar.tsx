@@ -14,36 +14,32 @@ import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
+import { initialSync } from "@/atomsAndStores/atoms";
+import { PixelatedRefreshIcon } from "./icons/PixelatedRefreshIcon";
+import { title } from "./primitives";
 
 export const NavBar = () => {
   const { data: session } = useSession();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const hasLocalData = useScanStore((state) => state.hasLocalData());
   const loginButtonRef = useRef<HTMLDivElement>(null);
+  const [hasInitialSync, setHasInitialSync] = useAtom(initialSync);
 
   //NOTE: Does double calls in dev mode
   useEffect(() => {
-    if (session?.user) {
+    if (session?.user && !hasInitialSync) {
+      //we only want to sync once unless manually triggered
       handleLogin();
+      setHasInitialSync(true);
     }
-  }, [session]);
+  }, [session, hasInitialSync]);
 
-  async function handleLogin() {
-    const loginResponse = await fetch("/api/auth/loginAccountHandling", {
-      method: "POST",
-    });
-    const loginData = await loginResponse.json();
-    if (loginData.error) {
-      console.error("Failed to login:", loginData.error);
-    } else {
-      setIsLoginModalOpen(false);
-      console.log("User logged in");
-    }
-
-    //try to fetch serverside scan data and sync with local data
-    //We'll overwrite local data with server data if the server data is newer
-    //NOTE: There really should never be a case where the server data is older than the local data
-    //Unless a user managed to get onto the website and upload data while the server was down somehow
-    //Or they had no internet connection (and how'd they get here then?)
+  //try to fetch serverside scan data and sync with local data
+  //We'll overwrite local data with server data if the server data is newer
+  //NOTE: There really should never be a case where the server data is older than the local data
+  //Unless a user managed to get onto the website and upload data while the server was down somehow
+  //Or they had no internet connection (and how'd they get here then?)
+  async function fetchAndSyncScanData() {
     try {
       const scanResponse = await fetch("/api/scans/fetch");
       const scanData = await scanResponse.json();
@@ -56,8 +52,23 @@ export const NavBar = () => {
     }
   }
 
+  async function handleLogin() {
+    const loginResponse = await fetch("/api/auth/loginAccountHandling", {
+      method: "POST",
+    });
+    const loginData = await loginResponse.json();
+    if (loginData.error) {
+      console.error("Failed to login:", loginData.error);
+    } else {
+      setIsLoginModalOpen(false);
+      console.log("User logged in");
+    }
+    await fetchAndSyncScanData();
+  }
+
   function handleLogout() {
     signOut();
+    setHasInitialSync(false);
     console.log("User signed out");
   }
 
@@ -71,7 +82,24 @@ export const NavBar = () => {
           <GithubIcon size={48} />
         </a>
       </div>
-      <div ref={loginButtonRef} className="absolute right-16 top-16">
+      {session?.user && hasLocalData && (
+        <div
+          className="absolute right-32 cursor-pointer transition-opacity hover:opacity-75"
+          style={{ top: "3.75rem", width: 56, height: 56 }}
+          onClick={() => {
+            fetchAndSyncScanData().catch((error) => {
+              console.error("Failed to sync scan data:", error);
+            });
+          }}
+        >
+          <PixelatedRefreshIcon size={56} />
+        </div>
+      )}
+      <div
+        ref={loginButtonRef}
+        className="absolute right-16 top-16"
+        title={session?.user ? "Logout" : "Login"}
+      >
         <Icon
           className="cursor-pointer transition-opacity hover:opacity-75"
           height={48}
