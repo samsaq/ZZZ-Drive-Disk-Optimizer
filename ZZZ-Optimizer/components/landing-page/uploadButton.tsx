@@ -3,13 +3,14 @@
 import { useScanStore } from "@/atomsAndStores/useScanStore";
 import { getSession } from "next-auth/react";
 import { ShinyButton } from "@/components/shinyButton";
-import router from "next/router";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { siteConfig } from "@/config/site";
 import { Icon } from "@iconify/react";
 
 export const UploadButton = () => {
   const { setScans, diskScans } = useScanStore();
+  const router = useRouter();
   const [buttonText, setButtonText] = useState("Upload Drive Disk Data");
   const [subtitleText, setSubtitleText] = useState(
     "Don't have a drive disk scan?",

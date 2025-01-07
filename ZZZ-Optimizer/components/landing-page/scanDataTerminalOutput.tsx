@@ -1,7 +1,7 @@
 "use client";
 
 import { useScanStore } from "@/atomsAndStores/useScanStore";
-import { TerminalOutput } from "./terminalOutput";
+import { TerminalOutput } from "../terminalOutput";
 
 export function ScanDataTerminalOutput() {
   const lastUploadTime = useScanStore((state) => state.lastUploadTime);

@@ -5,18 +5,17 @@ import { Icon } from "@iconify/react";
 import { useRef, useState, useEffect } from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
 
-import { DiscordIcon } from "./icons/DiscordIcon";
-import { GithubIcon } from "./icons/GithubIcon";
-import { RedditIcon } from "./icons/RedditIcon";
-import { GoogleIcon } from "./icons/GoogleIcon";
+import { DiscordIcon } from "../icons/DiscordIcon";
+import { GithubIcon } from "../icons/GithubIcon";
+import { RedditIcon } from "../icons/RedditIcon";
+import { GoogleIcon } from "../icons/GoogleIcon";
 
 import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
 import { initialSync } from "@/atomsAndStores/atoms";
-import { PixelatedRefreshIcon } from "./icons/PixelatedRefreshIcon";
-import { title } from "./primitives";
+import { PixelatedRefreshIcon } from "../icons/PixelatedRefreshIcon";
 
 export const NavBar = () => {
   const { data: session } = useSession();

@@ -5,10 +5,10 @@ import localFont from "next/font/local";
 
 import { Providers } from "./providers";
 
-import { NavBar } from "@/components/navBar";
+import { NavBar } from "@/components/layout/navBar";
 import { siteConfig } from "@/config/site";
-import CRTOverlay from "@/components/CRTOverlay";
-import CRTEffect from "@/components/CRTEffect";
+import CRTOverlay from "@/components/layout/CRTOverlay";
+import CRTEffect from "@/components/layout/CRTEffect";
 import AuthProvider from "@/components/providers/AuthProvider";
 
 export const metadata: Metadata = {
