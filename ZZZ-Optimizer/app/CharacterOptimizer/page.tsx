@@ -1,12 +1,15 @@
 "use client";
 
+import { pageTitle } from "@/atomsAndStores/atoms";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
 import CharacterReel from "@/components/character-optimizer-page/CharacterReel";
 import { useRouter } from "next/navigation";
-
+import { useAtom } from "jotai";
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
+  const [, setAtom] = useAtom(pageTitle);
   const router = useRouter();
+  setAtom("Character Optimizer");
   //if we don't have local data, we need to redirect to the landing page
   if (!hasLocalData) {
     router.push("/");
@@ -19,7 +22,7 @@ export default function CharacterOptimizer() {
           Character Optimizer
         </span>
       </div>
-      <CharacterReel forwardOnly={false} />
+      <CharacterReel forwardOnly={true} useImageTabs={true} />
     </section>
   );
 }

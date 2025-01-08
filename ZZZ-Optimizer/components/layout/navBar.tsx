@@ -14,7 +14,7 @@ import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
-import { initialSync } from "@/atomsAndStores/atoms";
+import { initialSync, pageTitle } from "@/atomsAndStores/atoms";
 import { PixelatedRefreshIcon } from "../icons/PixelatedRefreshIcon";
 
 export const NavBar = () => {
@@ -23,6 +23,7 @@ export const NavBar = () => {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
   const loginButtonRef = useRef<HTMLDivElement>(null);
   const [hasInitialSync, setHasInitialSync] = useAtom(initialSync);
+  const [currentPageTitle] = useAtom(pageTitle);
 
   //NOTE: Does double calls in dev mode
   useEffect(() => {
@@ -81,6 +82,11 @@ export const NavBar = () => {
           <GithubIcon size={48} />
         </a>
       </div>
+      {currentPageTitle && (
+        <div className="absolute left-1/2 top-[4.5rem] -translate-x-1/2 transform">
+          <h1 className="font-DOS text-4xl">{currentPageTitle}</h1>
+        </div>
+      )}
       {session?.user && hasLocalData && (
         <div
           className="absolute right-32 cursor-pointer transition-opacity hover:opacity-75"

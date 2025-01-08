@@ -1,20 +1,24 @@
 import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import DuotoneTab from "./duotoneTab";
+import ImageTab from "./imageTab";
 
 interface FactionInfo {
   images: string[];
   primaryColor: string;
   secondaryColor: string;
   shortName: string;
+  factionIconImage: string; //path to the faction icon image in the ZZZ-Agent-Images/Faction_Icons folder
 }
 
 interface CharacterReelProps {
   forwardOnly?: boolean;
+  useImageTabs?: boolean;
 }
 
 export default function CharacterReel({
   forwardOnly = false,
+  useImageTabs = false,
 }: Readonly<CharacterReelProps>) {
   // Keep your existing factionFolders data
   const factionFolders: { [faction: string]: FactionInfo } = {
@@ -28,6 +32,7 @@ export default function CharacterReel({
       primaryColor: "#ffba25",
       secondaryColor: "#181818",
       shortName: "BHI",
+      factionIconImage: "Belobog_Heavy_Industries.png",
     },
     Cunning_Hares: {
       images: [
@@ -39,6 +44,7 @@ export default function CharacterReel({
       primaryColor: "#ff80a1", //could also use "#ff80a1" (pink)
       secondaryColor: "#8830ff", //could also use ffffff (white) or "#8830ff" (purple)
       shortName: "CH",
+      factionIconImage: "Cunning_Hares.png",
     },
     Hollow_Special_Operations_Six: {
       images: [
@@ -50,6 +56,7 @@ export default function CharacterReel({
       primaryColor: "#42727b",
       secondaryColor: "#d8bb85", //also could use ffffff (white)
       shortName: "HSO6",
+      factionIconImage: "HSO6.png",
     },
     New_Eridu_Public_Security: {
       images: [
@@ -61,6 +68,7 @@ export default function CharacterReel({
       primaryColor: "#3c67aa",
       secondaryColor: "#c4cdd4",
       shortName: "NEPS",
+      factionIconImage: "NEPS.png",
     },
     Sons_of_Calydon: {
       images: [
@@ -73,6 +81,7 @@ export default function CharacterReel({
       primaryColor: "#af4947", //or red-orange "#cd4c31"
       secondaryColor: "#ffdd4f", //could do ffffff (white), black, "#ffdd4f" or darker "#d2d2d1"
       shortName: "SoC",
+      factionIconImage: "Sons_of_Calydon.png",
     },
     Victoria_Housekeeping: {
       images: [
@@ -84,6 +93,7 @@ export default function CharacterReel({
       primaryColor: "#241e2d",
       secondaryColor: "#cdc695",
       shortName: "VH",
+      factionIconImage: "Victoria_Housekeeping.png",
     },
   };
   const noCharacterImage = "/ZZZ-Agent-Images/No_Char.png";
@@ -180,20 +190,44 @@ export default function CharacterReel({
     return nameWithoutPrefix.replace(/[-_]/g, " ");
   }
 
+  function getFactionForCharacter(characterName: string): string | null {
+    for (const [faction, info] of Object.entries(factionFolders)) {
+      if (
+        info.images.some((image) => nameFromImagePath(image) === characterName)
+      ) {
+        return faction;
+      }
+    }
+    return null;
+  }
+
   return (
     <div className="fixed bottom-4 left-6 right-6">
-      <div className="absolute left-0 right-0 top-0 flex translate-y-[-100%] gap-1 px-4">
-        {Object.keys(factionFolders).map((faction) => (
-          <DuotoneTab
-            key={`tab-${faction}`}
-            text={factionFolders[faction].shortName}
-            primaryColor={factionFolders[faction].primaryColor}
-            secondaryColor={factionFolders[faction].secondaryColor}
-            onClick={() => handleFactionClick(faction)}
-            isSelected={selectedFaction === faction}
-            hasBottomBorder={false}
-          />
-        ))}
+      <div className="absolute left-2 right-0 top-0 flex translate-y-[-100%] gap-1 px-4">
+        {Object.keys(factionFolders).map((faction) =>
+          useImageTabs ? (
+            <ImageTab
+              key={`tab-${faction}`}
+              primaryColor={factionFolders[faction].primaryColor}
+              secondaryColor={factionFolders[faction].secondaryColor}
+              onClick={() => handleFactionClick(faction)}
+              isSelected={selectedFaction === faction}
+              hasBottomBorder={false}
+              imageSrc={`/ZZZ-Agent-Images/Faction_Icons/${factionFolders[faction].factionIconImage}`}
+              imageAlt={`${faction} icon`}
+            />
+          ) : (
+            <DuotoneTab
+              key={`tab-${faction}`}
+              text={factionFolders[faction].shortName}
+              primaryColor={factionFolders[faction].primaryColor}
+              secondaryColor={factionFolders[faction].secondaryColor}
+              onClick={() => handleFactionClick(faction)}
+              isSelected={selectedFaction === faction}
+              hasBottomBorder={false}
+            />
+          ),
+        )}
       </div>
 
       <div className="w-full border-t-2 border-white bg-gray-400 bg-opacity-20">
@@ -241,11 +275,20 @@ export default function CharacterReel({
                                 e.currentTarget.src = noCharacterImage;
                               }}
                               draggable={false}
-                              onClick={() =>
-                                setSelectedCharacter(
-                                  isSelected ? null : characterName,
-                                )
-                              }
+                              onClick={() => {
+                                const newCharacterName = isSelected
+                                  ? null
+                                  : characterName;
+                                setSelectedCharacter(newCharacterName);
+
+                                if (newCharacterName) {
+                                  const characterFaction =
+                                    getFactionForCharacter(newCharacterName);
+                                  if (characterFaction) {
+                                    handleFactionClick(characterFaction);
+                                  }
+                                }
+                              }}
                             />
                           </div>
                         );
