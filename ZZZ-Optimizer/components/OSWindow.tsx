@@ -8,7 +8,7 @@ import { useWindowStore } from "@/atomsAndStores/windowStore";
 
 //Creates a window that is draggable in the style of a OS program to serve as an aesthetically appropriate modal
 
-interface Position {
+export interface Position {
   x: number;
   y: number;
 }
@@ -16,7 +16,7 @@ interface Position {
 type AnchorPoint = "start" | "center" | "end";
 type Direction = "top" | "right" | "bottom" | "left";
 
-interface RelativePosition {
+export interface RelativePosition {
   targetRef: React.RefObject<HTMLElement>;
   direction: Direction;
   anchor: AnchorPoint;
@@ -35,7 +35,7 @@ interface OSWindowProps {
   titleClassName?: string;
   titleBarClassName?: string;
   closeButtonClassName?: string;
-  overrideMinWidth?: number;
+  overrideMinWidth?: number | "fit-content";
 }
 
 export function OSWindow({
@@ -226,7 +226,10 @@ export function OSWindow({
     }
   };
 
-  const minWidth = overrideMinWidth ?? 300;
+  const minWidthStyle =
+    overrideMinWidth === "fit-content"
+      ? undefined
+      : `${overrideMinWidth ?? 300}px`;
 
   return (
     <div
@@ -239,7 +242,7 @@ export function OSWindow({
       style={{
         left: `${windowPosition.x}px`,
         top: `${windowPosition.y}px`,
-        minWidth: `${minWidth}px`,
+        minWidth: minWidthStyle,
         zIndex: getWindowZIndex(id),
       }}
       onClick={handleWindowClick}

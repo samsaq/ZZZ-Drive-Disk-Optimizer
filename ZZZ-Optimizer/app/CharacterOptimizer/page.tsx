@@ -6,6 +6,8 @@ import CharacterReel from "@/components/character-optimizer-page/CharacterReel";
 import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
 import StatBoundRow from "@/components/character-optimizer-page/statBoundRow";
+import { DiskViewWindow } from "@/components/character-optimizer-page/diskViewWindow";
+import { useState } from "react";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
@@ -17,6 +19,9 @@ export default function CharacterOptimizer() {
     router.push("/");
   }
 
+  const [isDiskViewOpen, setIsDiskViewOpen] = useState(false);
+  const diskScans = useScanStore((state) => state.diskScans);
+
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
       <div className="inline-block max-w-lg justify-center text-center">
@@ -27,6 +32,22 @@ export default function CharacterOptimizer() {
             defaultMax={100}
             defaultRank={1}
           />
+          <button
+            className="my-4 border-2 border-white p-1 font-DOS"
+            onClick={() => setIsDiskViewOpen(true)}
+          >
+            View Disk
+          </button>
+
+          {isDiskViewOpen && diskScans.length > 0 && (
+            <DiskViewWindow
+              id="diskViewWindow"
+              isOpen={isDiskViewOpen}
+              onClose={() => setIsDiskViewOpen(false)}
+              disk={diskScans[0]}
+              position={{ x: 100, y: 100 }}
+            />
+          )}
         </span>
       </div>
       <CharacterReel forwardOnly={true} useImageTabs={true} />
