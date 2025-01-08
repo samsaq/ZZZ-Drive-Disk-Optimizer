@@ -18,8 +18,8 @@ export default function ImageTab({
   imageAlt,
   isSelected = false,
   hasBottomBorder = true,
-  imageWidth = "3rem",
-  imageHeight = "3rem",
+  imageWidth = "2.5rem",
+  imageHeight = "2.5rem",
 }: Readonly<ImageTabProps>) {
   const currentPrimaryColor = isSelected ? secondaryColor : primaryColor;
   const currentSecondaryColor = isSelected ? primaryColor : secondaryColor;
