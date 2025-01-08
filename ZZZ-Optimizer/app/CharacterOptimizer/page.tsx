@@ -1,9 +1,16 @@
 "use client";
 
 import { useScanStore } from "@/atomsAndStores/useScanStore";
+import CharacterReel from "@/components/character-optimizer-page/CharacterReel";
+import { useRouter } from "next/navigation";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
+  const router = useRouter();
+  //if we don't have local data, we need to redirect to the landing page
+  if (!hasLocalData) {
+    router.push("/");
+  }
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
@@ -12,6 +19,7 @@ export default function CharacterOptimizer() {
           Character Optimizer
         </span>
       </div>
+      <CharacterReel forwardOnly={false} />
     </section>
   );
 }

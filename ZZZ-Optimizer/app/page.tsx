@@ -1,7 +1,6 @@
 "use client";
 
 import { TextArt } from "@/components/textArt";
-import { siteConfig } from "@/config/site";
 import { UploadButton } from "@/components/landing-page/uploadButton";
 import { ScanDataTerminalOutput } from "@/components/landing-page/scanDataTerminalOutput";
 import { useScanStore } from "@/atomsAndStores/useScanStore";

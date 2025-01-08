@@ -29,6 +29,7 @@
     "clsx": "^2.1.1",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.3",
+    "embla-carousel-react": "^8.5.2",
     "framer-motion": "~11.1.1",
     "intl-messageformat": "^10.5.0",
     "jotai": "^2.8.0",
