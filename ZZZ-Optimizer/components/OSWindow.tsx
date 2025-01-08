@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useWindowStore } from "@/atomsAndStores/windowStore";
 
 //Creates a window that is draggable in the style of a OS program to serve as an aesthetically appropriate modal
 
@@ -23,6 +24,7 @@ interface RelativePosition {
 }
 
 interface OSWindowProps {
+  id: string;
   title: string;
   isOpen: boolean;
   onClose: () => void;
@@ -37,6 +39,7 @@ interface OSWindowProps {
 }
 
 export function OSWindow({
+  id,
   title,
   isOpen,
   onClose,
@@ -49,6 +52,8 @@ export function OSWindow({
   closeButtonClassName,
   overrideMinWidth,
 }: Readonly<OSWindowProps>) {
+  const { addWindow, removeWindow, bringToFront, getWindowZIndex } =
+    useWindowStore();
   const [windowPosition, setWindowPosition] =
     useState<Position>(defaultPosition);
   const [isDragging, setIsDragging] = useState(false);
@@ -192,12 +197,27 @@ export function OSWindow({
     setIsPositioned(true);
   }, [position, windowRef.current]);
 
+  // Add window to store when mounted and remove when unmounted
+  useEffect(() => {
+    if (isOpen) {
+      addWindow(id);
+    }
+    return () => {
+      removeWindow(id);
+    };
+  }, [id, isOpen]);
+
+  // Bring window to front when clicked
+  const handleWindowClick = () => {
+    bringToFront(id);
+  };
+
   if (!isOpen) return null;
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    bringToFront(id);
     if (windowRef.current) {
       const rect = windowRef.current.getBoundingClientRect();
-
       setDragOffset({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
@@ -212,7 +232,7 @@ export function OSWindow({
     <div
       ref={windowRef}
       className={cn(
-        "windowCRTEffect fixed z-[30] border-2 border-gray-300 bg-background shadow-lg",
+        "windowCRTEffect fixed border-2 border-gray-300 bg-background shadow-lg",
         className,
         !isPositioned && "opacity-0", // Hide window until positioned
       )}
@@ -220,7 +240,9 @@ export function OSWindow({
         left: `${windowPosition.x}px`,
         top: `${windowPosition.y}px`,
         minWidth: `${minWidth}px`,
+        zIndex: getWindowZIndex(id),
       }}
+      onClick={handleWindowClick}
     >
       {/* Title Bar */}
       <div

@@ -8,12 +8,12 @@ export default function CRTOverlay() {
   return (
     <>
       {/* CRT Mask - stays on very top */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[60]">
+      <div className="pointer-events-none absolute inset-0 z-[60] overflow-hidden">
         <Image fill alt="CRT Monitor Mask" src="/crt_amber_mask.png" />
       </div>
       {/* CRT Effect - goes between mask and content */}
       <div
-        className={`absolute inset-0 pointer-events-none overflow-hidden z-[40] ${CRTStyles.crt}`}
+        className={`pointer-events-none absolute inset-0 z-[50] overflow-hidden ${CRTStyles.crt}`}
       />
     </>
   );
