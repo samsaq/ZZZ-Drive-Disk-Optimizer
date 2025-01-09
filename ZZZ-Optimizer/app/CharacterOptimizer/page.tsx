@@ -12,6 +12,7 @@ import { WEngines } from "@/lib/WEngineStats";
 import { useState, useRef } from "react";
 import { SetSelectorWindow } from "@/components/character-optimizer-page/setSelectorWindow";
 import { UpgradeDiskViewWindow } from "@/components/character-optimizer-page/upgradeDiskViewWindow";
+import { WEngineSearchSelectWindow } from "@/components/character-optimizer-page/wengineSeachSelectWindow";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
@@ -33,6 +34,8 @@ export default function CharacterOptimizer() {
   const [isUpgradeDiskViewOpen, setIsUpgradeDiskViewOpen] = useState(false);
   const upgradeDiskViewButtonRef = useRef<HTMLButtonElement>(null);
   const testUpgradeDisks = diskScans.slice(0, 10); // Take first 10 disks for testing
+  const [isWEngineSearchOpen, setIsWEngineSearchOpen] = useState(false);
+  const wengineSearchButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
@@ -72,6 +75,13 @@ export default function CharacterOptimizer() {
               ref={upgradeDiskViewButtonRef}
             >
               View Upgrades
+            </button>
+            <button
+              className="my-4 border-2 border-white p-1 font-DOS"
+              onClick={() => setIsWEngineSearchOpen(true)}
+              ref={wengineSearchButtonRef}
+            >
+              Search WEngine
             </button>
           </div>
 
@@ -138,6 +148,20 @@ export default function CharacterOptimizer() {
               diskGridClassName="grid-cols-3"
             />
           )}
+
+          <WEngineSearchSelectWindow
+            id="wengineSearchWindow"
+            isOpen={isWEngineSearchOpen}
+            onClose={() => setIsWEngineSearchOpen(false)}
+            position={{
+              targetRef: wengineSearchButtonRef,
+              direction: "bottom",
+              anchor: "center",
+              offset: 10,
+            }}
+            curLevel={60}
+            curMaxLevel={60}
+          />
         </span>
         <CharacterReel forwardOnly={true} useImageTabs={true} />
       </div>

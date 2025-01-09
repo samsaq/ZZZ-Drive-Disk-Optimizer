@@ -109,7 +109,10 @@ export const WEngineViewWindow: React.FC<WEngineViewWindowProps> = ({
             <h3 className="font-DOS text-lg">Sub Stat</h3>
             <p className="font-DOS text-sm">
               {wengine.subStat.subStat}: {currentSubStatValue}
-              {wengine.subStat.subStat !== "Anomaly Proficiency" ? "%" : ""}
+              {wengine.subStat.subStat !== "Anomaly Proficiency" &&
+              wengine.subStat.subStat !== "Anomaly Mastery"
+                ? "%"
+                : ""}
             </p>
           </div>
 
