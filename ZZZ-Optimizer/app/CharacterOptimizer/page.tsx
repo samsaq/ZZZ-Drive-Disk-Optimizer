@@ -75,6 +75,8 @@ export default function CharacterOptimizer() {
               isOpen={isWEngineViewOpen}
               onClose={() => setIsWEngineViewOpen(false)}
               wengine={WEngines[0]}
+              curLevel={60}
+              curMaxLevel={60}
               position={{
                 targetRef: wengineViewButtonRef,
                 direction: "bottom",
