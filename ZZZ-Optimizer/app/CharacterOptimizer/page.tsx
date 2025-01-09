@@ -11,7 +11,7 @@ import { WEngineViewWindow } from "@/components/character-optimizer-page/wengine
 import { WEngines } from "@/lib/WEngineStats";
 import { useState, useRef } from "react";
 import { SetSelectorWindow } from "@/components/character-optimizer-page/setSelectorWindow";
-import { setData } from "@/lib/diskStats";
+import { UpgradeDiskViewWindow } from "@/components/character-optimizer-page/upgradeDiskViewWindow";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
@@ -30,6 +30,9 @@ export default function CharacterOptimizer() {
   const diskScans = useScanStore((state) => state.diskScans);
   const [isSetSelectorOpen, setIsSetSelectorOpen] = useState(false);
   const setSelectorButtonRef = useRef<HTMLButtonElement>(null);
+  const [isUpgradeDiskViewOpen, setIsUpgradeDiskViewOpen] = useState(false);
+  const upgradeDiskViewButtonRef = useRef<HTMLButtonElement>(null);
+  const testUpgradeDisks = diskScans.slice(0, 10); // Take first 10 disks for testing
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
@@ -62,6 +65,13 @@ export default function CharacterOptimizer() {
               ref={setSelectorButtonRef}
             >
               Select Set
+            </button>
+            <button
+              className="my-4 border-2 border-white p-1 font-DOS"
+              onClick={() => setIsUpgradeDiskViewOpen(true)}
+              ref={upgradeDiskViewButtonRef}
+            >
+              View Upgrades
             </button>
           </div>
 
@@ -112,6 +122,22 @@ export default function CharacterOptimizer() {
               offset: 10,
             }}
           />
+
+          {isUpgradeDiskViewOpen && testUpgradeDisks.length > 0 && (
+            <UpgradeDiskViewWindow
+              id="upgradeDiskViewWindow"
+              isOpen={isUpgradeDiskViewOpen}
+              onClose={() => setIsUpgradeDiskViewOpen(false)}
+              disks={testUpgradeDisks}
+              position={{
+                targetRef: upgradeDiskViewButtonRef,
+                direction: "bottom",
+                anchor: "center",
+                offset: 10,
+              }}
+              diskGridClassName="grid-cols-3"
+            />
+          )}
         </span>
         <CharacterReel forwardOnly={true} useImageTabs={true} />
       </div>

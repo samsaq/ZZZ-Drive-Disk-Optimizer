@@ -67,6 +67,9 @@ export function OSWindow({
   const [isPositioned, setIsPositioned] = useState(false); // tracks if the window has completed initial positioning
   const windowRef = useRef<HTMLDivElement>(null);
 
+  // Check if we're in a browser environment
+  const isBrowser = typeof window !== "undefined";
+
   // Center the window on mount
   useEffect(() => {
     if (!windowRef.current || isInitialized) return;
@@ -106,9 +109,9 @@ export function OSWindow({
     };
   }, [isDragging, dragOffset]);
 
-  // Update positioning logic
+  // Update positioning logic with browser check
   useEffect(() => {
-    if (!windowRef.current || isPositioned) return;
+    if (!isBrowser || !windowRef.current || isPositioned) return;
 
     const windowRect = windowRef.current.getBoundingClientRect();
 
@@ -199,7 +202,7 @@ export function OSWindow({
 
     setWindowPosition({ x, y });
     setIsPositioned(true);
-  }, [position, defaultPosition]);
+  }, [position, defaultPosition, isBrowser]);
 
   // Add window to store when mounted and remove when unmounted
   useEffect(() => {
