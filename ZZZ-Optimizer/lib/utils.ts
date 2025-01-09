@@ -5,7 +5,7 @@ import {
   valid_set_names,
   valid_base_stats,
   valid_random_stats,
-} from "./artifactStats";
+} from "./diskStats";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { valid_base_stats } from "./artifactStats";
+import { valid_ability_stats } from "./diskStats";
 
 const valid_WEngineSubStats = [
   "ATK", //since attack is the only base stat as an integer, it is always a percentage
@@ -12,8 +12,6 @@ const valid_WEngineSubStats = [
   "PEN Ratio",
   "Energy Regen",
 ];
-
-const valid_ability_stats = valid_base_stats.concat(["Shield", "DMG Taken"]);
 
 export const WEngineStatsSchema = z.object({
   name: z.string(),
