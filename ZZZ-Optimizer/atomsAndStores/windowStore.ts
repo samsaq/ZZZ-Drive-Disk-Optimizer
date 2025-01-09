@@ -12,6 +12,7 @@ interface WindowStore {
   removeWindow: (id: string) => void;
   bringToFront: (id: string) => void;
   getWindowZIndex: (id: string) => number;
+  getTopWindow: () => Window | undefined;
 }
 
 export const useWindowStore = create<WindowStore>((set, get) => ({
@@ -53,5 +54,10 @@ export const useWindowStore = create<WindowStore>((set, get) => ({
     const state = get();
     const index = state.windows.findIndex((w) => w.id === id);
     return state.baseZIndex + index;
+  },
+
+  getTopWindow: () => {
+    const state = get();
+    return state.windows[state.windows.length - 1];
   },
 }));

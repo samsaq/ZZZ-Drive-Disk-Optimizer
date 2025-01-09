@@ -52,8 +52,13 @@ export function OSWindow({
   closeButtonClassName,
   overrideMinWidth,
 }: Readonly<OSWindowProps>) {
-  const { addWindow, removeWindow, bringToFront, getWindowZIndex } =
-    useWindowStore();
+  const {
+    addWindow,
+    removeWindow,
+    bringToFront,
+    getWindowZIndex,
+    getTopWindow,
+  } = useWindowStore();
   const [windowPosition, setWindowPosition] =
     useState<Position>(defaultPosition);
   const [isDragging, setIsDragging] = useState(false);
@@ -210,6 +215,21 @@ export function OSWindow({
   const handleWindowClick = () => {
     bringToFront(id);
   };
+
+  // Add ESC key handler
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        const topWindow = getTopWindow();
+        if (topWindow?.id === id) {
+          onClose();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleEscKey);
+    return () => window.removeEventListener("keydown", handleEscKey);
+  }, [id, onClose, getTopWindow]);
 
   if (!isOpen) return null;
 

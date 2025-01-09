@@ -89,7 +89,7 @@ export const WEngineViewWindow: React.FC<WEngineViewWindowProps> = ({
           <div className="space-y-2">
             <p className="font-DOS">{wengine.name}</p>
             <p className="font-DOS">
-              Lvl. {curLevel} / {curMaxLevel}
+              Lvl. {curLevel}/{curMaxLevel}
             </p>
             <p className="font-DOS">Type: {wengine.type}</p>
             <p className="font-DOS">Rank: {wengine.rank}</p>
@@ -116,7 +116,7 @@ export const WEngineViewWindow: React.FC<WEngineViewWindowProps> = ({
           {/* Ability */}
           <div>
             <h3 className="font-DOS text-lg">{wengine.ability.abilityName}</h3>
-            <p className="whitespace-pre-wrap font-DOS text-sm">
+            <p className="max-w-[200px] whitespace-pre-wrap font-DOS text-sm">
               {wengine.ability.abilityDescription}
             </p>
             {wengine.ability.abilityStats && (
