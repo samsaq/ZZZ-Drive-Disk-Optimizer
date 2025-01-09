@@ -68,11 +68,16 @@ export const DiskViewWindow: React.FC<DiskViewWindowProps> = ({
             <h3 className="mb-2 font-DOS text-base">Sub Stats</h3>
             <div className="space-y-1">
               {disk.random_stats.map((stat, index) => (
-                <p key={index} className="text-nowrap font-DOS text-sm">
-                  {stat.baseStat}
-                  {stat.upgradeNum > 0 ? `+${stat.upgradeNum}` : ""}:{" "}
-                  {stat.value}
-                </p>
+                <div
+                  key={index}
+                  className="grid grid-cols-[1fr,auto] gap-2 font-DOS text-sm"
+                >
+                  <span className="text-nowrap text-left">
+                    {stat.baseStat}
+                    {stat.upgradeNum > 0 ? `+${stat.upgradeNum}` : ""}:
+                  </span>
+                  <span className="text-right">{stat.value}</span>
+                </div>
               ))}
             </div>
           </div>
