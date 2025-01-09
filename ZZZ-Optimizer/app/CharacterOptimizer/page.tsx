@@ -10,6 +10,8 @@ import { DiskViewWindow } from "@/components/character-optimizer-page/diskViewWi
 import { WEngineViewWindow } from "@/components/character-optimizer-page/wengineViewWindow";
 import { WEngines } from "@/lib/WEngineStats";
 import { useState, useRef } from "react";
+import { SetSelectorWindow } from "@/components/character-optimizer-page/setSelectorWindow";
+import { setData } from "@/lib/diskStats";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
@@ -26,6 +28,8 @@ export default function CharacterOptimizer() {
   const diskViewButtonRef = useRef<HTMLButtonElement>(null);
   const wengineViewButtonRef = useRef<HTMLButtonElement>(null);
   const diskScans = useScanStore((state) => state.diskScans);
+  const [isSetSelectorOpen, setIsSetSelectorOpen] = useState(false);
+  const setSelectorButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
@@ -51,6 +55,13 @@ export default function CharacterOptimizer() {
               ref={wengineViewButtonRef}
             >
               View WEngine
+            </button>
+            <button
+              className="my-4 border-2 border-white p-1 font-DOS"
+              onClick={() => setIsSetSelectorOpen(true)}
+              ref={setSelectorButtonRef}
+            >
+              Select Set
             </button>
           </div>
 
@@ -85,6 +96,22 @@ export default function CharacterOptimizer() {
               }}
             />
           )}
+
+          <SetSelectorWindow
+            id="setSelectorWindow"
+            isOpen={isSetSelectorOpen}
+            onClose={() => setIsSetSelectorOpen(false)}
+            onSetSelect={(set) => {
+              console.log("Selected set:", set);
+              setIsSetSelectorOpen(false);
+            }}
+            position={{
+              targetRef: setSelectorButtonRef,
+              direction: "bottom",
+              anchor: "center",
+              offset: 10,
+            }}
+          />
         </span>
         <CharacterReel forwardOnly={true} useImageTabs={true} />
       </div>

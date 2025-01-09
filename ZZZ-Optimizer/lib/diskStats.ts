@@ -72,7 +72,7 @@ export const diskDriveSetSchema = z.object({
 });
 export type DiskDriveSet = z.infer<typeof diskDriveSetSchema>;
 
-const setData: DiskDriveSet[] = [
+export const setData: DiskDriveSet[] = [
   {
     setName: "Astral Voice",
     twoPieceDesc: "ATK +10%",
