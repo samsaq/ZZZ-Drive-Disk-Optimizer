@@ -103,8 +103,7 @@ export function OSWindow({
 
   // Update positioning logic
   useEffect(() => {
-    if (!windowRef.current) return;
-    setIsPositioned(false); // Reset positioned state when position prop changes
+    if (!windowRef.current || isPositioned) return;
 
     const windowRect = windowRef.current.getBoundingClientRect();
 
@@ -195,7 +194,7 @@ export function OSWindow({
 
     setWindowPosition({ x, y });
     setIsPositioned(true);
-  }, [position, windowRef.current]);
+  }, [position, defaultPosition]);
 
   // Add window to store when mounted and remove when unmounted
   useEffect(() => {

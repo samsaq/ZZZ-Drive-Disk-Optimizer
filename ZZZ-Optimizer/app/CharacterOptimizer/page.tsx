@@ -7,7 +7,9 @@ import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
 import StatBoundRow from "@/components/character-optimizer-page/statBoundRow";
 import { DiskViewWindow } from "@/components/character-optimizer-page/diskViewWindow";
-import { useState } from "react";
+import { WEngineViewWindow } from "@/components/character-optimizer-page/wengineViewWindow";
+import { WEngines } from "@/lib/WEngineStats";
+import { useState, useRef } from "react";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
@@ -20,6 +22,9 @@ export default function CharacterOptimizer() {
   }
 
   const [isDiskViewOpen, setIsDiskViewOpen] = useState(false);
+  const [isWEngineViewOpen, setIsWEngineViewOpen] = useState(false);
+  const diskViewButtonRef = useRef<HTMLButtonElement>(null);
+  const wengineViewButtonRef = useRef<HTMLButtonElement>(null);
   const diskScans = useScanStore((state) => state.diskScans);
 
   return (
@@ -32,12 +37,22 @@ export default function CharacterOptimizer() {
             defaultMax={100}
             defaultRank={1}
           />
-          <button
-            className="my-4 border-2 border-white p-1 font-DOS"
-            onClick={() => setIsDiskViewOpen(true)}
-          >
-            View Disk
-          </button>
+          <div className="flex justify-center gap-4">
+            <button
+              className="my-4 border-2 border-white p-1 font-DOS"
+              onClick={() => setIsDiskViewOpen(true)}
+              ref={diskViewButtonRef}
+            >
+              View Disk
+            </button>
+            <button
+              className="my-4 border-2 border-white p-1 font-DOS"
+              onClick={() => setIsWEngineViewOpen(true)}
+              ref={wengineViewButtonRef}
+            >
+              View WEngine
+            </button>
+          </div>
 
           {isDiskViewOpen && diskScans.length > 0 && (
             <DiskViewWindow
@@ -45,12 +60,32 @@ export default function CharacterOptimizer() {
               isOpen={isDiskViewOpen}
               onClose={() => setIsDiskViewOpen(false)}
               disk={diskScans[0]}
-              position={{ x: 100, y: 100 }}
+              position={{
+                targetRef: diskViewButtonRef,
+                direction: "bottom",
+                anchor: "center",
+                offset: 10,
+              }}
+            />
+          )}
+
+          {isWEngineViewOpen && WEngines.length > 0 && (
+            <WEngineViewWindow
+              id="wengineViewWindow"
+              isOpen={isWEngineViewOpen}
+              onClose={() => setIsWEngineViewOpen(false)}
+              wengine={WEngines[0]}
+              position={{
+                targetRef: wengineViewButtonRef,
+                direction: "bottom",
+                anchor: "center",
+                offset: 10,
+              }}
             />
           )}
         </span>
+        <CharacterReel forwardOnly={true} useImageTabs={true} />
       </div>
-      <CharacterReel forwardOnly={true} useImageTabs={true} />
     </section>
   );
 }

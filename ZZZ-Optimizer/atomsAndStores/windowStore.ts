@@ -21,6 +21,9 @@ export const useWindowStore = create<WindowStore>((set, get) => ({
 
   addWindow: (id: string) =>
     set((state) => {
+      if (state.windows.some((w) => w.id === id)) {
+        return state; // Return unchanged state if window already exists
+      }
       const newWindows = [...state.windows, { id }];
       if (newWindows.length > state.maxWindows) {
         newWindows.shift(); // Remove oldest window
@@ -29,9 +32,14 @@ export const useWindowStore = create<WindowStore>((set, get) => ({
     }),
 
   removeWindow: (id: string) =>
-    set((state) => ({
-      windows: state.windows.filter((w) => w.id !== id),
-    })),
+    set((state) => {
+      if (!state.windows.some((w) => w.id === id)) {
+        return state; // Return unchanged state if window doesn't exist
+      }
+      return {
+        windows: state.windows.filter((w) => w.id !== id),
+      };
+    }),
 
   bringToFront: (id: string) =>
     set((state) => ({
