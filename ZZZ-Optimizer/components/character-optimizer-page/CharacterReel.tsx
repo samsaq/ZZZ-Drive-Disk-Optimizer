@@ -2,14 +2,7 @@ import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import DuotoneTab from "./duotoneTab";
 import ImageTab from "./imageTab";
-
-interface FactionInfo {
-  images: string[];
-  primaryColor: string;
-  secondaryColor: string;
-  shortName: string;
-  factionIconImage: string; //path to the faction icon image in the ZZZ-Agent-Images/Faction_Icons folder
-}
+import { Factions } from "@/lib/agentStats";
 
 interface CharacterReelProps {
   forwardOnly?: boolean;
@@ -20,82 +13,8 @@ export default function CharacterReel({
   forwardOnly = false,
   useImageTabs = false,
 }: Readonly<CharacterReelProps>) {
-  // Keep your existing factionFolders data
-  const factionFolders: { [faction: string]: FactionInfo } = {
-    Belobog_Heavy_Industries: {
-      images: [
-        "BHI-Anton_Ivanov.png",
-        "BHI-Ben_Bigger.png",
-        "BHI-Grace_Howard.png",
-        "BHI-Koleda_Belobog.png",
-      ],
-      primaryColor: "#ffba25",
-      secondaryColor: "#181818",
-      shortName: "BHI",
-      factionIconImage: "Belobog_Heavy_Industries.png",
-    },
-    Cunning_Hares: {
-      images: [
-        "CN-Anby-Demara.png",
-        "CN-Billy-Kid.png",
-        "CN-Nekomiya-Mana.png",
-        "CN-Nicole-Demara.png",
-      ],
-      primaryColor: "#ff80a1", //could also use "#ff80a1" (pink)
-      secondaryColor: "#8830ff", //could also use ffffff (white) or "#8830ff" (purple)
-      shortName: "CH",
-      factionIconImage: "Cunning_Hares.png",
-    },
-    Hollow_Special_Operations_Six: {
-      images: [
-        "HSO6-Asaba_Harumasa.png",
-        "HSO6-Hoshimi_Miyabi.png",
-        "HSO6-Soukaku.png",
-        "HSO6-Tsukishiro_Yanagi.png",
-      ],
-      primaryColor: "#42727b",
-      secondaryColor: "#d8bb85", //also could use ffffff (white)
-      shortName: "HSO6",
-      factionIconImage: "HSO6.png",
-    },
-    New_Eridu_Public_Security: {
-      images: [
-        "NEPS-Jane_Doe.png",
-        "NEPS-Qingyi.png",
-        "NEPS-Seth.png",
-        "NEPS-Zhu_Yuan.png",
-      ],
-      primaryColor: "#3c67aa",
-      secondaryColor: "#c4cdd4",
-      shortName: "NEPS",
-      factionIconImage: "NEPS.png",
-    },
-    Sons_of_Calydon: {
-      images: [
-        "SoC-Burnice.png",
-        "SoC-Caesar-King.png",
-        "SoC-Lighter.png",
-        "SoC-Lucy.png",
-        "SoC-Piper-Wheel.png",
-      ],
-      primaryColor: "#af4947", //or red-orange "#cd4c31"
-      secondaryColor: "#ffdd4f", //could do ffffff (white), black, "#ffdd4f" or darker "#d2d2d1"
-      shortName: "SoC",
-      factionIconImage: "Sons_of_Calydon.png",
-    },
-    Victoria_Housekeeping: {
-      images: [
-        "VH-Alexandrina.png",
-        "VH-Corin_Wickes.png",
-        "VH-Ellen_Joe.png",
-        "VH-Von_Lycaon.png",
-      ],
-      primaryColor: "#241e2d",
-      secondaryColor: "#cdc695",
-      shortName: "VH",
-      factionIconImage: "Victoria_Housekeeping.png",
-    },
-  };
+  // Remove the factionFolders constant and use imported Factions instead
+  const factionFolders = Factions;
   const noCharacterImage = "/ZZZ-Agent-Images/No_Char.png";
 
   const [selectedFaction, setSelectedFaction] = React.useState<string>(

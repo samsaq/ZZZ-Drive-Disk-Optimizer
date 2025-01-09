@@ -1,6 +1,5 @@
 import { z } from "zod";
 import { valid_base_stats } from "./artifactStats";
-import { stat } from "fs";
 
 const valid_WEngineSubStats = [
   "ATK", //since attack is the only base stat as an integer, it is always a percentage
