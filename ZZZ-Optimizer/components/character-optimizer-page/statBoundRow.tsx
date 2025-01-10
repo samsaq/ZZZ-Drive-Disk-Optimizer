@@ -8,6 +8,7 @@ interface StatBoundRowProps {
   defaultMax?: number;
   onMinChange?: (min: number | null) => void;
   onMaxChange?: (max: number | null) => void;
+  onRankChange?: (rank: number) => void;
 }
 
 export default function StatBoundRow({
@@ -17,6 +18,7 @@ export default function StatBoundRow({
   defaultMax,
   onMinChange,
   onMaxChange,
+  onRankChange,
 }: Readonly<StatBoundRowProps>) {
   const [showMin, setShowMin] = useState(defaultMin !== undefined);
   const [showMax, setShowMax] = useState(defaultMax !== undefined);
@@ -26,46 +28,47 @@ export default function StatBoundRow({
     1,
   );
 
-  if (!showMin && !showMax) {
-    return (
-      <div className="flex flex-row items-center gap-2 text-base">
-        <div className="border border-white p-[6px]">
+  const StatNameSection = (
+    <div className="col-start-1 flex h-10 w-full items-center">
+      <div className="flex w-full flex-row items-center gap-2">
+        <div className="border border-white p-[7px] text-base">
           <input
             type="number"
-            value={defaultRank}
+            defaultValue={defaultRank}
+            onChange={(e) => onRankChange?.(Number(e.target.value))}
             className="w-[1ch] border-b border-white text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           />
         </div>
-        <span className="w-fit border border-white p-[6px] text-center text-xl">
+        <span className="flex-1 text-nowrap border border-white p-2 text-base">
           {statName}:
         </span>
-        <button
-          onClick={() => {
-            setShowMin(true);
-            setShowMax(true);
-            onMinChange?.(defaultMin ?? 0);
-            onMaxChange?.(defaultMax ?? 0);
-          }}
-          className="flex h-10 w-10 items-center justify-center border border-white text-3xl"
-        >
-          +
-        </button>
       </div>
+    </div>
+  );
+
+  if (!showMin && !showMax) {
+    return (
+      <>
+        {StatNameSection}
+        <div className="col-start-2 flex h-10 items-center justify-start">
+          <button
+            onClick={() => {
+              setShowMin(true);
+              setShowMax(true);
+              onMinChange?.(defaultMin ?? 0);
+              onMaxChange?.(defaultMax ?? 0);
+            }}
+            className="flex h-10 w-10 items-center justify-center border border-white text-3xl"
+          >
+            +
+          </button>
+        </div>
+      </>
     );
   }
 
-  return (
-    <div className="flex flex-row items-center gap-2 text-base">
-      <div className="border border-white p-[6px]">
-        <input
-          type="number"
-          value={defaultRank}
-          className="w-[1ch] border-b border-white text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-        />
-      </div>
-      <span className="w-fit border border-white p-[6px] text-center text-xl">
-        {statName}:
-      </span>
+  const ControlsSection = (
+    <div className="col-start-2 flex h-10 flex-row items-center gap-2">
       {!showMin && (
         <button
           onClick={() => {
@@ -79,13 +82,13 @@ export default function StatBoundRow({
       )}
 
       {showMin && (
-        <div className="relative flex flex-row gap-2 border border-white p-2 px-4">
+        <div className="relative flex flex-row gap-2 border border-white p-2 px-4 text-base">
           <button
             onClick={() => {
               setShowMin(false);
               onMinChange?.(null);
             }}
-            className="absolute -right-[6px] -top-[6px] bg-white"
+            className="absolute right-0 top-0 bg-white"
           >
             <X className="h-3 w-3 text-black" />
           </button>
@@ -101,13 +104,13 @@ export default function StatBoundRow({
       )}
 
       {showMax && (
-        <div className="relative flex flex-row gap-2 border border-white p-2 px-4">
+        <div className="relative flex flex-row gap-2 border border-white p-2 px-4 text-base">
           <button
             onClick={() => {
               setShowMax(false);
               onMaxChange?.(null);
             }}
-            className="absolute -right-[6px] -top-[6px] bg-white"
+            className="absolute right-0 top-0 bg-white"
           >
             <X className="h-3 w-3 text-black" />
           </button>
@@ -134,5 +137,12 @@ export default function StatBoundRow({
         </button>
       )}
     </div>
+  );
+
+  return (
+    <>
+      {StatNameSection}
+      {ControlsSection}
+    </>
   );
 }

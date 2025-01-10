@@ -75,12 +75,21 @@ export const NavBar = () => {
   return (
     <>
       <div className="absolute left-16 top-16">
-        <a
-          className="cursor-pointer transition-opacity hover:opacity-75"
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={48} />
-        </a>
+        {currentPageTitle === "Character Optimizer" ? (
+          <a
+            className="cursor-pointer transition-opacity hover:opacity-75"
+            href="/"
+          >
+            <Icon icon="game-icons:tv" width={56} height={56} />
+          </a>
+        ) : (
+          <a
+            className="cursor-pointer transition-opacity hover:opacity-75"
+            href={siteConfig.links.github}
+          >
+            <GithubIcon size={48} />
+          </a>
+        )}
       </div>
       {currentPageTitle && (
         <div className="absolute left-1/2 top-[4.5rem] -translate-x-1/2 transform">
@@ -118,6 +127,7 @@ export const NavBar = () => {
       {isLoginModalOpen && (
         <OSWindow
           isOpen={isLoginModalOpen}
+          id="loginModal"
           overrideMinWidth={200}
           position={{
             targetRef: loginButtonRef,
