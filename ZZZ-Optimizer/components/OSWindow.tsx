@@ -126,8 +126,11 @@ export function OSWindow({
     }
 
     if ("x" in position) {
-      // Handle absolute positioning
-      setWindowPosition(position);
+      // Handle absolute positioning - centered on the provided coordinates
+      setWindowPosition({
+        x: position.x - windowRect.width / 2,
+        y: position.y - windowRect.height / 2,
+      });
       setIsPositioned(true);
       return;
     }

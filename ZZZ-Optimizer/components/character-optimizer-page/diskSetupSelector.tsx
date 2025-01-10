@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { SetSelectorWindow } from "../OSWindow-Variants/setSelectorWindow";
 import { SetDisplaySlot } from "./setDisplaySlot";
 import { DiskDriveSet } from "@/lib/diskStats";
@@ -13,7 +13,7 @@ export default function DiskSetupSelector() {
   >([]);
   const [isSetSelectorOpen, setIsSetSelectorOpen] = useState(false);
   const [currentEditingIndex, setCurrentEditingIndex] = useState<number>(-1);
-
+  const setSelectorRef = useRef<HTMLButtonElement>(null);
   const handleSetSelect = (set: DiskDriveSet) => {
     if (currentEditingIndex !== -1) {
       const newSets = [...selectedSets];
@@ -43,7 +43,7 @@ export default function DiskSetupSelector() {
             );
           }}
           className={cn(
-            "border border-gray-300 px-4 py-2 font-DOS text-base",
+            "border border-gray-300 p-2 font-DOS text-base",
             setupType === "4p2p"
               ? "bg-white text-black"
               : "bg-black text-white",
@@ -59,11 +59,12 @@ export default function DiskSetupSelector() {
             );
           }}
           className={cn(
-            "border border-gray-300 px-4 py-2 font-DOS text-base",
+            "border border-gray-300 p-2 font-DOS text-base",
             setupType === "2p2p2p"
               ? "bg-white text-black"
               : "bg-black text-white",
           )}
+          ref={setSelectorRef}
         >
           2p + 2p + 2p
         </button>
@@ -88,6 +89,10 @@ export default function DiskSetupSelector() {
         isOpen={isSetSelectorOpen}
         onClose={() => setIsSetSelectorOpen(false)}
         onSetSelect={handleSetSelect}
+        position={{
+          x: window.innerWidth / 2,
+          y: window.innerHeight / 2,
+        }}
       />
     </div>
   );
