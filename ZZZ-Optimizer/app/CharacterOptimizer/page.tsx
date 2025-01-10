@@ -6,13 +6,13 @@ import CharacterReel from "@/components/character-optimizer-page/CharacterReel";
 import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
 import StatBoundRow from "@/components/character-optimizer-page/statBoundRow";
-import { DiskViewWindow } from "@/components/character-optimizer-page/diskViewWindow";
-import { WEngineViewWindow } from "@/components/character-optimizer-page/wengineViewWindow";
+import { DiskViewWindow } from "@/components/OSWindow-Variants/diskViewWindow";
+import { WEngineViewWindow } from "@/components/OSWindow-Variants/wengineViewWindow";
 import { WEngines } from "@/lib/WEngineStats";
 import { useState, useRef } from "react";
-import { SetSelectorWindow } from "@/components/character-optimizer-page/setSelectorWindow";
-import { UpgradeDiskViewWindow } from "@/components/character-optimizer-page/upgradeDiskViewWindow";
-import { WEngineSearchSelectWindow } from "@/components/character-optimizer-page/wengineSeachSelectWindow";
+import { SetSelectorWindow } from "@/components/OSWindow-Variants/setSelectorWindow";
+import { UpgradeDiskViewWindow } from "@/components/OSWindow-Variants/upgradeDiskViewWindow";
+import { WEngineSearchSelectWindow } from "@/components/OSWindow-Variants/wengineSeachSelectWindow";
 
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
