@@ -18,7 +18,7 @@ export const SetDisplaySlot: React.FC<SetDisplaySlotProps> = ({
       onClick={onClick}
       className={cn(
         "flex h-fit w-full flex-col items-center gap-4 border border-gray-300 p-2",
-        "hover:bg-accent/50 active:bg-accent/70",
+        "hover:bg-white/30 active:bg-white/70",
         "transition-colors duration-200",
         className,
       )}
