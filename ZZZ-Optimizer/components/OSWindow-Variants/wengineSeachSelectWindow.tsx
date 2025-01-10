@@ -198,20 +198,24 @@ export const WEngineSearchSelectWindow: React.FC<
                   height={100}
                   className="object-contain"
                 />
-                <div className="space-y-2">
-                  <p className="font-DOS">{selectedWEngine.name}</p>
-                  {curLevel && curMaxLevel && (
-                    <p className="font-DOS">
-                      Lvl. {curLevel}/{curMaxLevel}
-                    </p>
-                  )}
-                  <p className="font-DOS">Type: {selectedWEngine.type}</p>
-                  <p className="font-DOS">Rank: {selectedWEngine.rank}</p>
+                <div className="w-full space-y-2">
+                  <p className="text-center font-DOS">{selectedWEngine.name}</p>
+                  <p className="text-center font-DOS">
+                    Lvl. {curLevel}/{curMaxLevel}
+                  </p>
+                  <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+                    <span className="text-nowrap text-left">Type:</span>
+                    <span className="text-right">{selectedWEngine.type}</span>
+                  </div>
+                  <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+                    <span className="text-nowrap text-left">Rank:</span>
+                    <span className="text-right">{selectedWEngine.rank}</span>
+                  </div>
                 </div>
 
                 {/* Stats Section */}
                 {curLevel && curMaxLevel && (
-                  <div className="space-y-2 border-t border-gray-300 pt-2">
+                  <div className="w-full space-y-2 border-t border-gray-300 pt-2">
                     <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS text-sm">
                       <span className="text-nowrap text-left">Base ATK:</span>
                       <span className="text-right">{baseValue}</span>
