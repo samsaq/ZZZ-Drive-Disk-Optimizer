@@ -121,7 +121,7 @@ export default function CharacterReel({
   }
 
   return (
-    <div className="fixed bottom-4 left-6 right-6">
+    <div className="fixed bottom-[3vh] left-[2vw] right-[2vw]">
       <div className="absolute left-2 right-0 top-0 flex translate-y-[-100%] gap-1 px-4">
         {Object.keys(factionFolders).map((faction) =>
           useImageTabs ? (
