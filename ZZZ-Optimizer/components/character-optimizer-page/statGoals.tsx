@@ -15,10 +15,10 @@ interface StatGoalsProps {
   containerClasses?: string;
 }
 
-export default function StatGoals({
+export const StatGoals = ({
   onStatBoundsChange,
   containerClasses,
-}: StatGoalsProps) {
+}: StatGoalsProps) => {
   const [statBounds, setStatBounds] = useState<StatGoalsState>({
     ATK: { min: null, max: null },
     HP: { min: null, max: null },
@@ -54,8 +54,10 @@ export default function StatGoals({
   };
 
   return (
-    <div className={`grid grid-cols-2 gap-x-4 gap-y-2 p-4 ${containerClasses}`}>
-      <div className="grid auto-cols-fr grid-cols-[auto_1fr] items-start gap-2">
+    <div
+      className={`grid grid-cols-[1fr_1fr] gap-x-4 gap-y-2 p-2 ${containerClasses}`}
+    >
+      <div className="grid auto-cols-fr grid-cols-[auto_1fr] content-start items-start gap-2">
         {Object.entries(statBounds)
           .slice(0, 5)
           .map(([statName, bounds]) => (
@@ -87,4 +89,4 @@ export default function StatGoals({
       </div>
     </div>
   );
-}
+};

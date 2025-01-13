@@ -43,7 +43,7 @@ export default function DiskSetupSelector() {
             );
           }}
           className={cn(
-            "border border-gray-300 p-2 font-DOS text-base",
+            "text-nowrap border border-gray-300 p-2 font-DOS text-base",
             setupType === "4p2p"
               ? "bg-white text-black"
               : "bg-black text-white",
@@ -59,7 +59,7 @@ export default function DiskSetupSelector() {
             );
           }}
           className={cn(
-            "border border-gray-300 p-2 font-DOS text-base",
+            "text-nowrap border border-gray-300 p-2 font-DOS text-base",
             setupType === "2p2p2p"
               ? "bg-white text-black"
               : "bg-black text-white",
@@ -71,12 +71,16 @@ export default function DiskSetupSelector() {
 
         {/* Moved slots into the same container and removed max-width */}
         {setupType !== "none" && (
-          <div className="max-w-[150px]">
+          <div className="flex max-w-[150px] flex-col gap-0">
             {selectedSets.map((set, index) => (
               <SetDisplaySlot
                 key={`${setupType}-slot-${index}`}
                 set={set}
                 onClick={() => openSetSelector(index)}
+                position={{
+                  isFirst: index === 0,
+                  isLast: index === selectedSets.length - 1,
+                }}
               />
             ))}
           </div>

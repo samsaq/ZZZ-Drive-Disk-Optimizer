@@ -5,15 +5,12 @@ import { useScanStore } from "@/atomsAndStores/useScanStore";
 import CharacterReel from "@/components/character-optimizer-page/CharacterReel";
 import { useRouter } from "next/navigation";
 import { useAtom } from "jotai";
-import StatBoundRow from "@/components/character-optimizer-page/statBoundRow";
-import { DiskViewWindow } from "@/components/OSWindow-Variants/diskViewWindow";
-import { WEngineViewWindow } from "@/components/OSWindow-Variants/wengineViewWindow";
-import { WEngines } from "@/lib/WEngineStats";
-import { useState, useRef } from "react";
-import { SetSelectorWindow } from "@/components/OSWindow-Variants/setSelectorWindow";
-import { UpgradeDiskViewWindow } from "@/components/OSWindow-Variants/upgradeDiskViewWindow";
-import { WEngineSearchSelectWindow } from "@/components/OSWindow-Variants/wengineSeachSelectWindow";
-
+import { OptimizerReport } from "@/components/character-optimizer-page/optimizerReport";
+import { DiskWheel } from "@/components/character-optimizer-page/diskWheel";
+import { PlatingReccomendations } from "@/components/character-optimizer-page/platingReccomendations";
+import { StatGoals } from "@/components/character-optimizer-page/statGoals";
+import { ShinyButton } from "@/components/shinyButton";
+import DiskSetupSelector from "@/components/character-optimizer-page/diskSetupSelector";
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
   const [, setPageTitle] = useAtom(pageTitle);
@@ -24,145 +21,47 @@ export default function CharacterOptimizer() {
     router.push("/");
   }
 
-  const [isDiskViewOpen, setIsDiskViewOpen] = useState(false);
-  const [isWEngineViewOpen, setIsWEngineViewOpen] = useState(false);
-  const diskViewButtonRef = useRef<HTMLButtonElement>(null);
-  const wengineViewButtonRef = useRef<HTMLButtonElement>(null);
+  const optimizerReport = {
+    errors: [],
+    warnings: [],
+  };
+
+  //grab some disks from the scan store for testing the plating reccomendations
   const diskScans = useScanStore((state) => state.diskScans);
-  const [isSetSelectorOpen, setIsSetSelectorOpen] = useState(false);
-  const setSelectorButtonRef = useRef<HTMLButtonElement>(null);
-  const [isUpgradeDiskViewOpen, setIsUpgradeDiskViewOpen] = useState(false);
-  const upgradeDiskViewButtonRef = useRef<HTMLButtonElement>(null);
-  const testUpgradeDisks = diskScans.slice(0, 10); // Take first 10 disks for testing
-  const [isWEngineSearchOpen, setIsWEngineSearchOpen] = useState(false);
-  const wengineSearchButtonRef = useRef<HTMLButtonElement>(null);
+  const upgradeDisks = [...diskScans] // Create explicit copy using spread operator
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 20);
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
-      <div className="inline-block max-w-lg justify-center text-center">
-        <span className="text-center font-DOS text-4xl">
-          <StatBoundRow
-            statName="ATK"
-            defaultMin={0}
-            defaultMax={100}
-            defaultRank={1}
-          />
-          <div className="flex justify-center gap-4">
-            <button
-              className="my-4 border-2 border-white p-1 font-DOS"
-              onClick={() => setIsDiskViewOpen(true)}
-              ref={diskViewButtonRef}
-            >
-              View Disk
-            </button>
-            <button
-              className="my-4 border-2 border-white p-1 font-DOS"
-              onClick={() => setIsWEngineViewOpen(true)}
-              ref={wengineViewButtonRef}
-            >
-              View WEngine
-            </button>
-            <button
-              className="my-4 border-2 border-white p-1 font-DOS"
-              onClick={() => setIsSetSelectorOpen(true)}
-              ref={setSelectorButtonRef}
-            >
-              Select Set
-            </button>
-            <button
-              className="my-4 border-2 border-white p-1 font-DOS"
-              onClick={() => setIsUpgradeDiskViewOpen(true)}
-              ref={upgradeDiskViewButtonRef}
-            >
-              View Upgrades
-            </button>
-            <button
-              className="my-4 border-2 border-white p-1 font-DOS"
-              onClick={() => setIsWEngineSearchOpen(true)}
-              ref={wengineSearchButtonRef}
-            >
-              Search WEngine
-            </button>
+      <div className="w-fit">
+        <div className="relative flex w-fit flex-row font-DOS">
+          <div
+            className="localEffectCRT absolute z-10 pt-4"
+            style={{ left: "1rem" }}
+          >
+            <OptimizerReport report={optimizerReport} />
           </div>
+          <div className="flex flex-col items-center justify-center gap-0">
+            <div className="relative">
+              <DiskWheel />
+              <div className="relative pt-4">
+                <PlatingReccomendations upgradeDisks={upgradeDisks} />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-start">
+            <div className="flex flex-col items-center pb-4">
+              <span className="pb-2 font-DOS text-lg text-white">
+                Stat Goals
+              </span>
+              <StatGoals />
+            </div>
 
-          {isDiskViewOpen && diskScans.length > 0 && (
-            <DiskViewWindow
-              id="diskViewWindow"
-              isOpen={isDiskViewOpen}
-              onClose={() => setIsDiskViewOpen(false)}
-              disk={diskScans[0]}
-              position={{
-                targetRef: diskViewButtonRef,
-                direction: "bottom",
-                anchor: "center",
-                offset: 10,
-              }}
-            />
-          )}
-
-          {isWEngineViewOpen && WEngines.length > 0 && (
-            <WEngineViewWindow
-              id="wengineViewWindow"
-              isOpen={isWEngineViewOpen}
-              onClose={() => setIsWEngineViewOpen(false)}
-              wengine={WEngines[0]}
-              curLevel={60}
-              curMaxLevel={60}
-              position={{
-                targetRef: wengineViewButtonRef,
-                direction: "bottom",
-                anchor: "center",
-                offset: 10,
-              }}
-            />
-          )}
-
-          <SetSelectorWindow
-            id="setSelectorWindow"
-            isOpen={isSetSelectorOpen}
-            onClose={() => setIsSetSelectorOpen(false)}
-            onSetSelect={(set) => {
-              console.log("Selected set:", set);
-              setIsSetSelectorOpen(false);
-            }}
-            position={{
-              targetRef: setSelectorButtonRef,
-              direction: "bottom",
-              anchor: "center",
-              offset: 10,
-            }}
-          />
-
-          {isUpgradeDiskViewOpen && testUpgradeDisks.length > 0 && (
-            <UpgradeDiskViewWindow
-              id="upgradeDiskViewWindow"
-              isOpen={isUpgradeDiskViewOpen}
-              onClose={() => setIsUpgradeDiskViewOpen(false)}
-              disks={testUpgradeDisks}
-              position={{
-                targetRef: upgradeDiskViewButtonRef,
-                direction: "bottom",
-                anchor: "center",
-                offset: 10,
-              }}
-              diskGridClassName="grid-cols-3"
-            />
-          )}
-
-          <WEngineSearchSelectWindow
-            id="wengineSearchWindow"
-            isOpen={isWEngineSearchOpen}
-            onClose={() => setIsWEngineSearchOpen(false)}
-            position={{
-              targetRef: wengineSearchButtonRef,
-              direction: "bottom",
-              anchor: "center",
-              offset: 10,
-            }}
-            curLevel={60}
-            curMaxLevel={60}
-          />
-        </span>
+            <ShinyButton text="Optimize Disks" textClasses="text-lg" />
+          </div>
+          <DiskSetupSelector />
+        </div>
         <CharacterReel forwardOnly={true} useImageTabs={true} />
       </div>
     </section>

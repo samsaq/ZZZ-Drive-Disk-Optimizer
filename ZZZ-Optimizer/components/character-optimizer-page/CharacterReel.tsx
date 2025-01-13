@@ -182,7 +182,7 @@ export default function CharacterReel({
                                 transition:
                                   "opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out",
                                 backgroundColor: isSelected
-                                  ? `${secondaryColor}60`
+                                  ? `${secondaryColor}90`
                                   : `${primaryColor}60`,
                               }}
                             />

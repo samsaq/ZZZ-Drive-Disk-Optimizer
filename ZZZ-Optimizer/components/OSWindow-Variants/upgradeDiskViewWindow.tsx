@@ -32,11 +32,27 @@ export const UpgradeDiskViewWindow: React.FC<UpgradeDiskViewWindowProps> = ({
     new Set(disks.map((disk) => disk.partition_number)),
   ).sort((a, b) => parseInt(a) - parseInt(b));
 
-  // State for selected partition and disk
-  const [selectedPartition, setSelectedPartition] = useState(partitions[0]);
-  const [selectedDisk, setSelectedDisk] = useState<DiskScan | null>(
-    disks.find((disk) => disk.partition_number === partitions[0]) ?? null,
+  // More robust initial states
+  const firstPartition = partitions[0];
+  const firstDiskInPartition = disks.find(
+    (disk) => disk.partition_number === firstPartition,
   );
+
+  const [selectedPartition, setSelectedPartition] = useState(firstPartition);
+  const [selectedDisk, setSelectedDisk] = useState<DiskScan | null>(
+    firstDiskInPartition ?? null,
+  );
+
+  // When partition changes, update selected disk
+  const handlePartitionChange = (
+    partition: "1" | "2" | "3" | "4" | "5" | "6",
+  ) => {
+    setSelectedPartition(partition);
+    const firstDiskInNewPartition = disks.find(
+      (disk) => disk.partition_number === partition,
+    );
+    setSelectedDisk(firstDiskInNewPartition ?? null);
+  };
 
   // Filter disks by partition
   const filteredDisks = disks.filter(
@@ -55,15 +71,15 @@ export const UpgradeDiskViewWindow: React.FC<UpgradeDiskViewWindowProps> = ({
     >
       <div className={cn("flex gap-4", containerClassName)}>
         {/* Left side - Disk selection */}
-        <div className="flex w-fit flex-col border-r border-gray-300 pr-4">
+        <div className="flex w-fit flex-col items-center justify-center border-r border-gray-300 pr-4">
           {/* Partition filters */}
           <div className="mb-4 flex flex-none gap-2">
             {partitions.map((partition) => (
               <button
                 key={partition}
-                onClick={() => setSelectedPartition(partition)}
+                onClick={() => handlePartitionChange(partition)}
                 className={cn(
-                  "border border-gray-300 px-2 py-1 font-DOS text-lg",
+                  "border border-gray-300 px-[10px] py-1 font-DOS text-lg",
                   selectedPartition === partition
                     ? "bg-primary text-primary-foreground"
                     : "hover:bg-accent",
@@ -79,7 +95,7 @@ export const UpgradeDiskViewWindow: React.FC<UpgradeDiskViewWindowProps> = ({
             <div
               className={cn(
                 "grid h-56 auto-rows-[4rem] gap-2 overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-                "grid-cols-2",
+                "min-w-[12rem] grid-cols-[repeat(auto-fill,4rem)] justify-start",
                 diskGridClassName,
               )}
             >
@@ -127,13 +143,19 @@ export const UpgradeDiskViewWindow: React.FC<UpgradeDiskViewWindowProps> = ({
                 />
                 <div className="space-y-2">
                   <p className="font-DOS">{selectedDisk.set_name}</p>
-                  <p className="font-DOS">
-                    Rarity: {selectedDisk.drive_rarity}
-                  </p>
-                  <p className="font-DOS">
-                    Level: {selectedDisk.drive_current_level}/
-                    {selectedDisk.drive_max_level}
-                  </p>
+                  <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+                    <span className="text-nowrap text-left">Rarity:</span>
+                    <span className="text-right">
+                      {selectedDisk.drive_rarity}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+                    <span className="text-nowrap text-left">Level:</span>
+                    <span className="text-right">
+                      {selectedDisk.drive_current_level}/
+                      {selectedDisk.drive_max_level}
+                    </span>
+                  </div>
                 </div>
               </div>
 

@@ -81,7 +81,7 @@ export const Factions: { [faction: string]: FactionInfo } = {
       "SoC-Piper-Wheel.png",
     ],
     primaryColor: "#af4947",
-    secondaryColor: "#ffdd4f",
+    secondaryColor: "#ffffff", //could try white #ffffff or yellow #ffdd4f
     shortName: "SoC",
     fullName: "Sons of Calydon",
     factionIconImage: "Sons_of_Calydon.png",

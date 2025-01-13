@@ -34,9 +34,8 @@ export const OptimizerReport = ({
       <div
         className="flex cursor-pointer flex-col gap-0"
         onClick={() => setIsReportOpen(true)}
-        ref={reportContainerRef}
       >
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" ref={reportContainerRef}>
           <Icon
             icon="ant-design:warning-outlined"
             color={hasWarnings ? "orange" : "white"}
