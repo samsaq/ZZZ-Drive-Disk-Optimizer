@@ -21,7 +21,7 @@ export function ScanDataTerminalOutput() {
 
   return (
     <TerminalOutput
-      className={`fixed bottom-8 left-16`}
+      className={`fixed bottom-[4vh] left-[4vw]`}
       inputClassName={`${displayColor}`}
       textSize="text-3xl"
       text={displayString}

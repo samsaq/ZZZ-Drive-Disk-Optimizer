@@ -74,7 +74,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className="absolute left-16 top-16">
+      <div className="absolute left-[4vw] top-[7.5vh]">
         {currentPageTitle === "Character Optimizer" ? (
           <a
             className="cursor-pointer transition-opacity hover:opacity-75"
@@ -92,14 +92,14 @@ export const NavBar = () => {
         )}
       </div>
       {currentPageTitle && (
-        <div className="absolute left-1/2 top-[4.5rem] -translate-x-1/2 transform">
+        <div className="absolute left-1/2 top-[8.5vh] -translate-x-1/2 transform">
           <h1 className="font-DOS text-4xl">{currentPageTitle}</h1>
         </div>
       )}
       {session?.user && hasLocalData && (
         <div
-          className="absolute right-32 cursor-pointer transition-opacity hover:opacity-75"
-          style={{ top: "3.75rem", width: 56, height: 56 }}
+          className="absolute right-[7vw] top-[7.25vh] cursor-pointer transition-opacity hover:opacity-75"
+          style={{ width: 56, height: 56 }}
           onClick={() => {
             fetchAndSyncScanData().catch((error) => {
               console.error("Failed to sync scan data:", error);
@@ -111,7 +111,7 @@ export const NavBar = () => {
       )}
       <div
         ref={loginButtonRef}
-        className="absolute right-16 top-16"
+        className="absolute right-[4vw] top-[7.5vh]"
         title={session?.user ? "Logout" : "Login"}
       >
         <Icon
