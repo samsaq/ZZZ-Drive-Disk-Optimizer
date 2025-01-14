@@ -7,11 +7,13 @@ import { Factions } from "@/lib/agentStats";
 interface CharacterReelProps {
   forwardOnly?: boolean;
   useImageTabs?: boolean;
+  onLevelChange?: (maxLevel: number, currentLevel: number) => void;
 }
 
 export default function CharacterReel({
   forwardOnly = false,
   useImageTabs = false,
+  onLevelChange,
 }: Readonly<CharacterReelProps>) {
   // Remove the factionFolders constant and use imported Factions instead
   const factionFolders = Factions;
@@ -22,7 +24,7 @@ export default function CharacterReel({
   );
   const [selectedCharacter, setSelectedCharacter] = React.useState<
     string | null
-  >(null);
+  >(nameFromImagePath(factionFolders[selectedFaction].images[0]));
 
   // Initialize Embla Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -35,6 +37,31 @@ export default function CharacterReel({
     skipSnaps: false,
     inViewThreshold: 0.7,
   });
+
+  // Add new state for levels
+  const [maxLevel, setMaxLevel] = React.useState<number>(60);
+  const [currentLevel, setCurrentLevel] = React.useState<number>(60);
+
+  // Add level selection handler
+  const handleLevelChange = useCallback(
+    (newMax: number | null, newCurrent: number | null) => {
+      if (newMax !== null) {
+        setMaxLevel(newMax);
+        // Ensure current level doesn't exceed new max
+        if (currentLevel > newMax) {
+          setCurrentLevel(newMax);
+          onLevelChange?.(newMax, newMax);
+        } else {
+          onLevelChange?.(newMax, currentLevel);
+        }
+      }
+      if (newCurrent !== null && newCurrent <= maxLevel) {
+        setCurrentLevel(newCurrent);
+        onLevelChange?.(maxLevel, newCurrent);
+      }
+    },
+    [currentLevel, maxLevel, onLevelChange],
+  );
 
   // Handle faction selection via tabs
   const handleFactionClick = useCallback(
@@ -122,31 +149,65 @@ export default function CharacterReel({
 
   return (
     <div className="fixed bottom-[3vh] left-[2vw] right-[2vw]">
-      <div className="absolute left-2 right-0 top-0 flex translate-y-[-100%] gap-1 px-4">
-        {Object.keys(factionFolders).map((faction) =>
-          useImageTabs ? (
-            <ImageTab
-              key={`tab-${faction}`}
-              primaryColor={factionFolders[faction].primaryColor}
-              secondaryColor={factionFolders[faction].secondaryColor}
-              onClick={() => handleFactionClick(faction)}
-              isSelected={selectedFaction === faction}
-              hasBottomBorder={false}
-              imageSrc={`/ZZZ-Agent-Images/Faction_Icons/${factionFolders[faction].factionIconImage}`}
-              imageAlt={`${faction} icon`}
+      <div className="absolute left-2 right-0 top-0 flex translate-y-[-100%] justify-between px-4">
+        <div className="flex gap-1">
+          {Object.keys(factionFolders).map((faction) =>
+            useImageTabs ? (
+              <ImageTab
+                key={`tab-${faction}`}
+                primaryColor={factionFolders[faction].primaryColor}
+                secondaryColor={factionFolders[faction].secondaryColor}
+                onClick={() => handleFactionClick(faction)}
+                isSelected={selectedFaction === faction}
+                hasBottomBorder={false}
+                imageSrc={`/ZZZ-Agent-Images/Faction_Icons/${factionFolders[faction].factionIconImage}`}
+                imageAlt={`${faction} icon`}
+              />
+            ) : (
+              <DuotoneTab
+                key={`tab-${faction}`}
+                text={factionFolders[faction].shortName}
+                primaryColor={factionFolders[faction].primaryColor}
+                secondaryColor={factionFolders[faction].secondaryColor}
+                onClick={() => handleFactionClick(faction)}
+                isSelected={selectedFaction === faction}
+                hasBottomBorder={false}
+              />
+            ),
+          )}
+        </div>
+
+        <div className="flex translate-x-[-10%] items-center gap-2 rounded-t-lg border-l-2 border-r-2 border-t-2 border-white px-2">
+          <div className="flex items-center gap-2">
+            <span className="font-DOS text-sm">Lv.</span>
+            <input
+              type="number"
+              min={1}
+              max={maxLevel}
+              value={currentLevel}
+              onChange={(e) => {
+                const value = Math.min(
+                  Math.max(1, parseInt(e.target.value) || 1),
+                  maxLevel,
+                );
+                handleLevelChange(null, value);
+              }}
+              className="w-[3ch] border-b border-white bg-transparent text-center font-DOS text-sm [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             />
-          ) : (
-            <DuotoneTab
-              key={`tab-${faction}`}
-              text={factionFolders[faction].shortName}
-              primaryColor={factionFolders[faction].primaryColor}
-              secondaryColor={factionFolders[faction].secondaryColor}
-              onClick={() => handleFactionClick(faction)}
-              isSelected={selectedFaction === faction}
-              hasBottomBorder={false}
-            />
-          ),
-        )}
+            <span className="font-DOS text-sm">/</span>
+          </div>
+          <select
+            className="rounded border border-white bg-transparent font-DOS text-sm hover:bg-white/10 [&>option]:bg-zinc-900"
+            value={maxLevel}
+            onChange={(e) => handleLevelChange(parseInt(e.target.value), null)}
+          >
+            {[10, 20, 30, 40, 50, 60].map((level) => (
+              <option key={level} value={level}>
+                {level}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="w-full border-t-2 border-white bg-gray-400 bg-opacity-20">
