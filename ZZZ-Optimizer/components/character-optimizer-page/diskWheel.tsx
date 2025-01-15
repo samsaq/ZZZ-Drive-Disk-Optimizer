@@ -47,7 +47,7 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({ disks = [] }) => {
       "absolute left-[50%] top-[50%] w-[80px] h-[80px] object-contain";
     const positions: Record<1 | 2 | 3 | 4 | 5 | 6, string> = {
       1: "-translate-x-[153%] -translate-y-[195%]",
-      2: "-translate-x-[250%] -translate-y-1/2",
+      2: "-translate-x-[220%] -translate-y-1/2",
       3: "-translate-x-[153%] translate-y-[94%]",
       4: "translate-x-[54%] translate-y-[94%]",
       5: "translate-x-[122%] -translate-y-1/2",
