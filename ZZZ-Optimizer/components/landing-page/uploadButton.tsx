@@ -84,12 +84,14 @@ export const UploadButton = () => {
       {hasLocalData && (
         <div className="mt-1 flex flex-row items-center justify-center gap-2">
           <div title="Download Scanner" className="cursor-pointer">
-            <Icon
-              width={18}
-              height={18}
-              icon="memory:download"
-              className="translate-y-[3px]"
-            />
+            <a href={siteConfig.links.scanner}>
+              <Icon
+                width={18}
+                height={18}
+                icon="memory:download"
+                className="translate-y-[3px]"
+              />
+            </a>
           </div>
           <button
             className="text-center font-DOS text-sm underline decoration-white decoration-dotted decoration-2 underline-offset-4"

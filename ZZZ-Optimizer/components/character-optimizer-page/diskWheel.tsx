@@ -46,12 +46,12 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({ disks = [] }) => {
     const baseClasses =
       "absolute left-[50%] top-[50%] w-[80px] h-[80px] object-contain";
     const positions: Record<1 | 2 | 3 | 4 | 5 | 6, string> = {
-      1: "-translate-x-[153%] -translate-y-[195%]",
-      2: "-translate-x-[220%] -translate-y-1/2",
-      3: "-translate-x-[153%] translate-y-[94%]",
-      4: "translate-x-[54%] translate-y-[94%]",
-      5: "translate-x-[122%] -translate-y-1/2",
-      6: "translate-x-[54%] -translate-y-[195%]",
+      1: "-translate-x-[151%] -translate-y-[192%]",
+      2: "-translate-x-[217%] -translate-y-1/2",
+      3: "-translate-x-[151%] translate-y-[92%]",
+      4: "translate-x-[54%] translate-y-[92%]",
+      5: "translate-x-[120%] -translate-y-1/2",
+      6: "translate-x-[53%] -translate-y-[192%]",
     };
     return `${baseClasses} ${positions[partition]}`;
   };
