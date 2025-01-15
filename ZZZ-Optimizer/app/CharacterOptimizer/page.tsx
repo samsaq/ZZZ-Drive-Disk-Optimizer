@@ -42,10 +42,7 @@ export default function CharacterOptimizer() {
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
       <div className="w-fit">
         <div className="relative flex w-fit flex-row font-DOS">
-          <div
-            className="localEffectCRT absolute z-10 pt-4"
-            style={{ left: "1rem" }}
-          >
+          <div className="pt-4" style={{ left: "1rem" }}>
             <OptimizerReport report={optimizerReport} />
           </div>
           <div className="flex flex-col items-center justify-center gap-0">

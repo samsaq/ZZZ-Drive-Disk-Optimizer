@@ -32,7 +32,7 @@ export const OptimizerReport = ({
   return (
     <>
       <div
-        className="flex cursor-pointer flex-col gap-0"
+        className="localEffectCRT z-10flex absolute cursor-pointer flex-col gap-0" //Needed here to have the character optimizer page allow the report to be positioned in the diskwheel image
         onClick={() => setIsReportOpen(true)}
       >
         <div className="flex flex-col items-center" ref={reportContainerRef}>
