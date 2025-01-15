@@ -46,8 +46,8 @@ export const DiskViewWindow: React.FC<DiskViewWindowProps> = ({
             className="object-contain"
           />
           <div className="space-y-2">
-            <p className="font-DOS">Rarity: {disk.drive_rarity}</p>
-            <p className="font-DOS">
+            <p className="text-nowrap font-DOS">Rarity: {disk.drive_rarity}</p>
+            <p className="text-nowrap font-DOS">
               Level: {disk.drive_current_level}/{disk.drive_max_level}
             </p>
           </div>
@@ -58,7 +58,7 @@ export const DiskViewWindow: React.FC<DiskViewWindowProps> = ({
           {/* Main stat */}
           <div className="border-b border-gray-300 pb-2">
             <h3 className="font-DOS text-lg">Main Stat</h3>
-            <p className="font-DOS">
+            <p className="text-nowrap font-DOS">
               {disk.drive_base_stat}: {disk.drive_base_stat_number}
             </p>
           </div>

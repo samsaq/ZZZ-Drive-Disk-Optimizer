@@ -1,16 +1,14 @@
 import { useState, useRef, useEffect } from "react";
-import { WEngineSearchSelectWindow } from "../OSWindow-Variants/wengineSeachSelectWindow";
+import { WEngineSearchSelectWindow } from "@/components/OSWindow-Variants/wengineSeachSelectWindow";
 import { WEngineStats } from "@/lib/WEngineStats";
+import { DiskScan } from "@/lib/utils";
+import { DiskViewWindow } from "@/components/OSWindow-Variants/diskViewWindow";
 
 export interface DiskWheelProps {
-  leftDisks?: { position: "top" | "middle" | "bottom"; imagePath: string }[];
-  rightDisks?: { position: "top" | "middle" | "bottom"; imagePath: string }[];
+  disks?: { partition: 1 | 2 | 3 | 4 | 5 | 6; disk: DiskScan }[];
 }
 
-export const DiskWheel: React.FC<DiskWheelProps> = ({
-  leftDisks = [],
-  rightDisks = [],
-}) => {
+export const DiskWheel: React.FC<DiskWheelProps> = ({ disks = [] }) => {
   const diskWheelImagePath =
     "/ZZZ-Disk-Drive-Images/disk_holder_no_bg_wengine_hole.png";
 
@@ -22,6 +20,9 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({
   const [wengineImagePath, setWengineImagePath] = useState<string>(
     "/ZZZ-WEngine-Images/No_WEngine_Selected.png",
   );
+
+  const [selectedDisk, setSelectedDisk] = useState<DiskScan | null>(null);
+  const [isDiskViewOpen, setIsDiskViewOpen] = useState(false);
 
   //on select wengine, set the wengine image path
   const handleWEngineSelect = (wengine: WEngineStats) => {
@@ -41,25 +42,47 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({
 
   const wengineSelectButtonRef = useRef<HTMLDivElement>(null);
 
-  const getPositionClasses = (
-    side: "left" | "right",
-    position: "top" | "middle" | "bottom",
-  ) => {
+  const getPositionClasses = (partition: 1 | 2 | 3 | 4 | 5 | 6) => {
     const baseClasses =
-      "absolute left-[50%] top-[50%] w-[64px] h-[64px] object-contain";
-    const positions = {
-      left: {
-        top: "-translate-x-[200%] -translate-y-[200%]",
-        middle: "-translate-x-[250%] -translate-y-1/2",
-        bottom: "-translate-x-[200%] translate-y-[100%]",
-      },
-      right: {
-        top: "translate-x-[100%] -translate-y-[200%]",
-        middle: "translate-x-[150%] -translate-y-1/2",
-        bottom: "translate-x-[100%] translate-y-[100%]",
-      },
+      "absolute left-[50%] top-[50%] w-[80px] h-[80px] object-contain";
+    const positions: Record<1 | 2 | 3 | 4 | 5 | 6, string> = {
+      1: "-translate-x-[153%] -translate-y-[195%]",
+      2: "-translate-x-[250%] -translate-y-1/2",
+      3: "-translate-x-[153%] translate-y-[94%]",
+      4: "translate-x-[54%] translate-y-[94%]",
+      5: "translate-x-[122%] -translate-y-1/2",
+      6: "translate-x-[54%] -translate-y-[195%]",
     };
-    return `${baseClasses} ${positions[side][position]}`;
+    return `${baseClasses} ${positions[partition]}`;
+  };
+
+  const renderDiskButton = (diskData: {
+    partition: 1 | 2 | 3 | 4 | 5 | 6;
+    disk: DiskScan;
+  }) => {
+    if (!diskData) return null;
+    const { disk, partition } = diskData;
+    const setName = disk.set_name.replace(/ /g, "_");
+    const imagePath = `/ZZZ-Disk-Drive-Images/Disk_Images/${setName}.png`;
+
+    return (
+      <div
+        className={getPositionClasses(partition)}
+        onClick={() => {
+          setSelectedDisk(disk);
+          setIsDiskViewOpen(true);
+        }}
+      >
+        <div className="group relative h-full w-full">
+          <div className="absolute inset-0 rounded-full border-4 border-transparent transition-colors group-hover:border-white/70" />
+          <img
+            src={imagePath}
+            alt={`Partition ${partition} disk`}
+            className="h-full w-full object-contain"
+          />
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -76,6 +99,20 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({
         }}
         onSelect={setSelectedWEngine}
       />
+      {selectedDisk && (
+        <DiskViewWindow
+          id="disk-view"
+          isOpen={isDiskViewOpen}
+          onClose={() => setIsDiskViewOpen(false)}
+          disk={selectedDisk}
+          position={{
+            targetRef: wengineSelectButtonRef,
+            offset: 20,
+            direction: "right",
+            anchor: "center",
+          }}
+        />
+      )}
       <div className="relative flex h-fit w-fit items-center justify-center brightness-125">
         <img
           src={diskWheelImagePath}
@@ -105,25 +142,8 @@ export const DiskWheel: React.FC<DiskWheelProps> = ({
           </div>
         </div>
 
-        {/* Left side disks */}
-        {leftDisks.map((disk, index) => (
-          <img
-            key={`left-${disk.position}-${index}`}
-            src={disk.imagePath}
-            alt={`Left ${disk.position} disk`}
-            className={getPositionClasses("left", disk.position)}
-          />
-        ))}
-
-        {/* Right side disks */}
-        {rightDisks.map((disk, index) => (
-          <img
-            key={`right-${disk.position}-${index}`}
-            src={disk.imagePath}
-            alt={`Right ${disk.position} disk`}
-            className={getPositionClasses("right", disk.position)}
-          />
-        ))}
+        {/* Render all disks */}
+        {disks.map((diskData, index) => renderDiskButton(diskData))}
       </div>
     </>
   );

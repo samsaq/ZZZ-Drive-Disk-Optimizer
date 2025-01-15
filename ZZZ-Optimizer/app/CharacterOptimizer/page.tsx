@@ -27,16 +27,34 @@ export default function CharacterOptimizer() {
     warnings: [],
   };
 
-  const diskWheelProps: DiskWheelProps = {
-    leftDisks: [],
-    rightDisks: [],
-  };
-
   //grab some disks from the scan store for testing the plating reccomendations
   const diskScans = useScanStore((state) => state.diskScans);
   const upgradeDisks = [...diskScans] // Create explicit copy using spread operator
     .sort(() => Math.random() - 0.5)
     .slice(0, 20);
+
+  //Grab one disk from each partition for the disk wheel
+  const disksOnePerPartition = Object.values(
+    diskScans.reduce(
+      (acc, disk) => {
+        if (!acc[disk.partition_number]) {
+          acc[disk.partition_number] = {
+            partition: Number(disk.partition_number) as 1 | 2 | 3 | 4 | 5 | 6,
+            disk: disk,
+          };
+        }
+        return acc;
+      },
+      {} as Record<
+        number,
+        { partition: 1 | 2 | 3 | 4 | 5 | 6; disk: (typeof diskScans)[0] }
+      >,
+    ),
+  );
+
+  const diskWheelProps: DiskWheelProps = {
+    disks: Object.values(disksOnePerPartition),
+  };
 
   return (
     <section className="flex h-full w-full flex-col items-center justify-center gap-4 py-8 text-white md:py-10">
