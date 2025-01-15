@@ -11,6 +11,7 @@ import { PlatingReccomendations } from "@/components/character-optimizer-page/pl
 import { StatGoals } from "@/components/character-optimizer-page/statGoals";
 import { ShinyButton } from "@/components/shinyButton";
 import DiskSetupSelector from "@/components/character-optimizer-page/diskSetupSelector";
+import type { DiskWheelProps } from "@/components/character-optimizer-page/diskWheel";
 export default function CharacterOptimizer() {
   const hasLocalData = useScanStore((state) => state.hasLocalData());
   const [, setPageTitle] = useAtom(pageTitle);
@@ -24,6 +25,11 @@ export default function CharacterOptimizer() {
   const optimizerReport = {
     errors: [],
     warnings: [],
+  };
+
+  const diskWheelProps: DiskWheelProps = {
+    leftDisks: [],
+    rightDisks: [],
   };
 
   //grab some disks from the scan store for testing the plating reccomendations
@@ -44,7 +50,7 @@ export default function CharacterOptimizer() {
           </div>
           <div className="flex flex-col items-center justify-center gap-0">
             <div className="relative">
-              <DiskWheel />
+              <DiskWheel {...diskWheelProps} />
               <div className="relative pt-4">
                 <PlatingReccomendations upgradeDisks={upgradeDisks} />
               </div>

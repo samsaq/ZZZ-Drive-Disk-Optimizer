@@ -38,6 +38,21 @@ interface OSWindowProps {
   overrideMinWidth?: number | "fit-content";
 }
 
+function getAbsolutePosition(element: HTMLElement) {
+  const rect = element.getBoundingClientRect();
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  return {
+    top: rect.top + scrollTop,
+    left: rect.left + scrollLeft,
+    width: rect.width,
+    height: rect.height,
+    bottom: rect.bottom + scrollTop,
+    right: rect.right + scrollLeft,
+  };
+}
+
 export function OSWindow({
   id,
   title,
@@ -140,6 +155,9 @@ export function OSWindow({
     if (!targetRef.current) return;
 
     const targetRect = targetRef.current.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
     let x = 0;
     let y = 0;
 
@@ -203,6 +221,10 @@ export function OSWindow({
         break;
     }
 
+    // Constrain to viewport
+    x = Math.max(0, Math.min(x, viewportWidth - windowRect.width));
+    y = Math.max(0, Math.min(y, viewportHeight - windowRect.height));
+
     setWindowPosition({ x, y });
     setIsPositioned(true);
   }, [position, defaultPosition, isBrowser]);
@@ -248,6 +270,7 @@ export function OSWindow({
         y: e.clientY - rect.top,
       });
       setIsDragging(true);
+      e.stopPropagation(); // Prevent event bubbling
     }
   };
 
@@ -260,7 +283,7 @@ export function OSWindow({
     <div
       ref={windowRef}
       className={cn(
-        "windowCRTEffect fixed border-2 border-gray-300 bg-background shadow-lg",
+        "windowCRTEffect fixed transform-none border-2 border-gray-300 bg-background shadow-lg",
         className,
         !isPositioned && "opacity-0", // Hide window until positioned
       )}
