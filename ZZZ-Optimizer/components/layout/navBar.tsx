@@ -24,6 +24,12 @@ export const NavBar = () => {
   const loginButtonRef = useRef<HTMLDivElement>(null);
   const [hasInitialSync, setHasInitialSync] = useAtom(initialSync);
   const [currentPageTitle] = useAtom(pageTitle);
+  const [mounted, setMounted] = useState(false);
+
+  // Don't render until mounted to avoid hydration errors due to the jotai atom determining the page title (and thereby home button icon)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   //NOTE: Does double calls in dev mode
   useEffect(() => {
@@ -70,6 +76,11 @@ export const NavBar = () => {
     signOut();
     setHasInitialSync(false);
     console.log("User signed out");
+  }
+
+  // Don't render anything until mounted
+  if (!mounted) {
+    return null;
   }
 
   return (
