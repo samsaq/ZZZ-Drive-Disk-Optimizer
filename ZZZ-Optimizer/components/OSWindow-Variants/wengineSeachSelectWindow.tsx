@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { OSWindow, Position, RelativePosition } from "@/components/OSWindow";
 import { WEngines, WEngineStats } from "@/lib/WEngineStats";
 import { cn } from "@/lib/utils";
+import { Icon } from "@iconify/react";
 
 interface WEngineSearchSelectWindowProps {
   id: string;
@@ -43,6 +44,7 @@ export const WEngineSearchSelectWindow: React.FC<
   );
   const [curLevel, setCurLevel] = useState(60);
   const [curMaxLevel, setCurMaxLevel] = useState(60);
+  const [upgradeLevel, setUpgradeLevel] = useState(1);
 
   //trigger onSelect when a WEngine is selected
   useEffect(() => {
@@ -168,7 +170,14 @@ export const WEngineSearchSelectWindow: React.FC<
                 return (
                   <button
                     key={`${wengine.name}-${wengine.type}-${index}`}
-                    onClick={() => setSelectedWEngine(wengine)}
+                    onClick={() => {
+                      if (selectedWEngine === wengine) {
+                        // If double clicking the same wengine, close the window
+                        onClose();
+                      } else {
+                        setSelectedWEngine(wengine);
+                      }
+                    }}
                     className={cn(
                       "flex h-16 w-16 items-center justify-center rounded border border-gray-300 p-1",
                       selectedWEngine === wengine
@@ -263,52 +272,78 @@ export const WEngineSearchSelectWindow: React.FC<
 
               {/* Level selector and confirm button */}
               <div className="mt-auto flex items-center justify-between border-t border-gray-300 pt-4">
-                <div className="flex items-center gap-2">
-                  <span className="font-DOS text-sm">Lv.</span>
-                  <input
-                    type="number"
-                    min={1}
-                    max={curMaxLevel}
-                    value={curLevel}
-                    onChange={(e) => {
-                      const value = Math.min(
-                        Math.max(1, parseInt(e.target.value) || 1),
-                        curMaxLevel ?? 60,
-                      );
-                      setCurLevel(value);
-                      if (selectedWEngine && onSelect) {
-                        onSelect(selectedWEngine);
-                      }
-                    }}
-                    className="w-[3ch] border-b border-white bg-transparent text-center font-DOS text-sm [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
-                  />
-                  <span className="font-DOS text-sm">/</span>
-                  <select
-                    className="rounded border border-white bg-transparent font-DOS text-sm hover:bg-white/10 [&>option]:bg-zinc-900"
-                    value={curMaxLevel}
-                    onChange={(e) => {
-                      const newMax = parseInt(e.target.value);
-                      setCurMaxLevel(newMax);
+                <div className="flex items-center gap-4">
+                  {/* Level selector group */}
+                  <div className="flex items-center gap-2">
+                    <span className="font-DOS text-sm">Lv.</span>
+                    <input
+                      type="number"
+                      min={1}
+                      max={curMaxLevel}
+                      value={curLevel}
+                      onChange={(e) => {
+                        const value = Math.min(
+                          Math.max(1, parseInt(e.target.value) || 1),
+                          curMaxLevel ?? 60,
+                        );
+                        setCurLevel(value);
+                        if (selectedWEngine && onSelect) {
+                          onSelect(selectedWEngine);
+                        }
+                      }}
+                      className="w-[3ch] border-b border-white bg-transparent text-center font-DOS text-sm [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                    />
+                    <span className="font-DOS text-sm">/</span>
+                    <select
+                      className="rounded border border-white bg-transparent font-DOS text-sm hover:bg-white/10 [&>option]:bg-zinc-900"
+                      value={curMaxLevel}
+                      onChange={(e) => {
+                        const newMax = parseInt(e.target.value);
+                        setCurMaxLevel(newMax);
 
-                      // Adjust current level to stay within 10 levels of max
-                      const minAllowedLevel = Math.max(newMax - 10, 1);
-                      if (curLevel < minAllowedLevel) {
-                        setCurLevel(minAllowedLevel);
-                      } else if (curLevel > newMax) {
-                        setCurLevel(newMax);
-                      }
+                        // Adjust current level to stay within 10 levels of max
+                        const minAllowedLevel = Math.max(newMax - 10, 1);
+                        if (curLevel < minAllowedLevel) {
+                          setCurLevel(minAllowedLevel);
+                        } else if (curLevel > newMax) {
+                          setCurLevel(newMax);
+                        }
 
-                      if (selectedWEngine && onSelect) {
-                        onSelect(selectedWEngine);
-                      }
-                    }}
-                  >
-                    {[10, 20, 30, 40, 50, 60].map((level) => (
-                      <option key={level} value={level}>
-                        {level}
-                      </option>
+                        if (selectedWEngine && onSelect) {
+                          onSelect(selectedWEngine);
+                        }
+                      }}
+                    >
+                      {[10, 20, 30, 40, 50, 60].map((level) => (
+                        <option key={level} value={level}>
+                          {level}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Upgrade level selector */}
+                  <div className="flex gap-1">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        onClick={() => {
+                          setUpgradeLevel(star);
+                          if (selectedWEngine && onSelect) {
+                            onSelect(selectedWEngine);
+                          }
+                        }}
+                      >
+                        <Icon
+                          icon={
+                            star <= upgradeLevel
+                              ? "iconamoon:star-fill"
+                              : "iconamoon:star-light"
+                          }
+                        />
+                      </button>
                     ))}
-                  </select>
+                  </div>
                 </div>
 
                 <button
