@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { OptimizerReportViewWindow } from "@/components/OSWindow-Variants/optimizerReportViewWindow";
 import { useState, useRef } from "react";
+import { useOptimizer } from "@/components/character-optimizer-page/optimizerContext";
 
-//TODO: make a full version of this report object for the optimizer code and then use it here later
 export type OptimizerReport = {
   errors: {
     title: string;
@@ -15,15 +15,12 @@ export type OptimizerReport = {
 };
 
 interface OptimizerReportProps {
-  report: OptimizerReport;
   iconSize?: number;
 }
 
-export const OptimizerReport = ({
-  report,
-  iconSize = 32,
-}: OptimizerReportProps) => {
-  const { errors, warnings } = report;
+export const OptimizerReport = ({ iconSize = 32 }: OptimizerReportProps) => {
+  const { optimizerReport, setOptimizerReport } = useOptimizer();
+  const { errors, warnings } = optimizerReport;
   const hasErrors = errors.length > 0;
   const hasWarnings = warnings.length > 0;
   const [isReportOpen, setIsReportOpen] = useState(false);
@@ -32,7 +29,7 @@ export const OptimizerReport = ({
   return (
     <>
       <div
-        className="localEffectCRT z-10flex absolute cursor-pointer flex-col gap-0" //Needed here to have the character optimizer page allow the report to be positioned in the diskwheel image
+        className="localEffectCRT absolute z-10 cursor-pointer" //Needed here to have the character optimizer page allow the report to be positioned in the diskwheel image
         onClick={() => setIsReportOpen(true)}
       >
         <div className="flex flex-col items-center" ref={reportContainerRef}>
@@ -69,7 +66,7 @@ export const OptimizerReport = ({
         id="optimizer-report"
         isOpen={isReportOpen}
         onClose={() => setIsReportOpen(false)}
-        report={report}
+        report={optimizerReport}
         position={{
           targetRef: reportContainerRef,
           direction: "right",

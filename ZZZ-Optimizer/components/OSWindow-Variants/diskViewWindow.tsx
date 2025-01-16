@@ -46,10 +46,16 @@ export const DiskViewWindow: React.FC<DiskViewWindowProps> = ({
             className="object-contain"
           />
           <div className="space-y-2">
-            <p className="text-nowrap font-DOS">Rarity: {disk.drive_rarity}</p>
-            <p className="text-nowrap font-DOS">
-              Level: {disk.drive_current_level}/{disk.drive_max_level}
-            </p>
+            <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+              <span className="text-nowrap text-left">Rarity:</span>
+              <span className="text-right">{disk.drive_rarity}</span>
+            </div>
+            <div className="grid grid-cols-[1fr,auto] gap-2 font-DOS">
+              <span className="text-nowrap text-left">Level:</span>
+              <span className="text-right">
+                {disk.drive_current_level}/{disk.drive_max_level}
+              </span>
+            </div>
           </div>
         </div>
 

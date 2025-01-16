@@ -1,56 +1,66 @@
-import { useState } from "react";
-import StatBoundRow from "./statBoundRow";
-
-export interface StatBounds {
-  min: number | null;
-  max: number | null;
-}
-
-export interface StatGoalsState {
-  [key: string]: StatBounds;
-}
+import {
+  OPTIMIZER_STATS,
+  useOptimizer,
+} from "@/components/character-optimizer-page/optimizerContext";
+import StatBoundRow from "@/components/character-optimizer-page/statBoundRow";
+import type { StatGoalsData } from "@/components/character-optimizer-page/optimizerContext";
 
 interface StatGoalsProps {
-  onStatBoundsChange?: (bounds: StatGoalsState) => void;
   containerClasses?: string;
 }
 
-export const StatGoals = ({
-  onStatBoundsChange,
-  containerClasses,
-}: StatGoalsProps) => {
-  const [statBounds, setStatBounds] = useState<StatGoalsState>({
-    ATK: { min: null, max: null },
-    HP: { min: null, max: null },
-    DEF: { min: null, max: null },
-    "CRIT Rate": { min: null, max: null },
-    "CRIT DMG": { min: null, max: null },
-    ER: { min: null, max: null },
-    AP: { min: null, max: null },
-    AM: { min: null, max: null },
-    PEN: { min: null, max: null },
-  });
+type StatName = keyof StatGoalsData;
 
-  const handleMinChange = (statName: string, value: number | null) => {
-    setStatBounds((prev) => {
-      const newBounds = {
-        ...prev,
-        [statName]: { ...prev[statName], min: value },
-      };
-      onStatBoundsChange?.(newBounds);
-      return newBounds;
+export const StatGoals = ({ containerClasses }: StatGoalsProps) => {
+  const { statGoals, setStatGoals } = useOptimizer();
+
+  const handleMinChange = (statName: StatName, value: number | null) => {
+    const newStatGoals = {
+      ...statGoals,
+      [statName]: {
+        ...statGoals[statName],
+        min: value,
+      },
+    };
+    setStatGoals(newStatGoals);
+  };
+
+  const handleMaxChange = (statName: StatName, value: number | null) => {
+    const newStatGoals = {
+      ...statGoals,
+      [statName]: {
+        ...statGoals[statName],
+        max: value,
+      },
+    };
+    setStatGoals(newStatGoals);
+  };
+
+  const handleRankChange = (statName: StatName, value: number) => {
+    setStatGoals({
+      ...statGoals,
+      [statName]: {
+        ...statGoals[statName],
+        rank: value,
+      },
     });
   };
 
-  const handleMaxChange = (statName: string, value: number | null) => {
-    setStatBounds((prev) => {
-      const newBounds = {
-        ...prev,
-        [statName]: { ...prev[statName], max: value },
-      };
-      onStatBoundsChange?.(newBounds);
-      return newBounds;
-    });
+  const handleMinMaxChange = (
+    //used for when both need to be set at once to avoid race condition
+    statName: StatName,
+    min: number | null,
+    max: number | null,
+  ) => {
+    const newStatGoals = {
+      ...statGoals,
+      [statName]: {
+        ...statGoals[statName],
+        min,
+        max,
+      },
+    };
+    setStatGoals(newStatGoals);
   };
 
   return (
@@ -58,34 +68,38 @@ export const StatGoals = ({
       className={`grid grid-cols-[1fr_1fr] gap-x-4 gap-y-2 p-2 ${containerClasses}`}
     >
       <div className="grid auto-cols-fr grid-cols-[auto_1fr] content-start items-start gap-2">
-        {Object.entries(statBounds)
-          .slice(0, 5)
-          .map(([statName, bounds]) => (
-            <StatBoundRow
-              key={statName}
-              statName={statName}
-              defaultRank={1}
-              defaultMin={bounds.min ?? undefined}
-              defaultMax={bounds.max ?? undefined}
-              onMinChange={(value) => handleMinChange(statName, value)}
-              onMaxChange={(value) => handleMaxChange(statName, value)}
-            />
-          ))}
+        {OPTIMIZER_STATS.slice(0, 5).map((statName) => (
+          <StatBoundRow
+            key={statName}
+            statName={statName}
+            defaultRank={statGoals[statName].rank ?? 1}
+            defaultMin={statGoals[statName].min ?? undefined}
+            defaultMax={statGoals[statName].max ?? undefined}
+            onMinChange={(value) => handleMinChange(statName, value)}
+            onMaxChange={(value) => handleMaxChange(statName, value)}
+            onMinMaxChange={(min, max) =>
+              handleMinMaxChange(statName, min, max)
+            }
+            onRankChange={(value) => handleRankChange(statName, value)}
+          />
+        ))}
       </div>
       <div className="grid auto-cols-fr grid-cols-[auto_1fr] content-start items-start gap-2">
-        {Object.entries(statBounds)
-          .slice(5)
-          .map(([statName, bounds]) => (
-            <StatBoundRow
-              key={statName}
-              statName={statName}
-              defaultRank={1}
-              defaultMin={bounds.min ?? undefined}
-              defaultMax={bounds.max ?? undefined}
-              onMinChange={(value) => handleMinChange(statName, value)}
-              onMaxChange={(value) => handleMaxChange(statName, value)}
-            />
-          ))}
+        {OPTIMIZER_STATS.slice(5).map((statName) => (
+          <StatBoundRow
+            key={statName}
+            statName={statName}
+            defaultRank={statGoals[statName].rank ?? 1}
+            defaultMin={statGoals[statName].min ?? undefined}
+            defaultMax={statGoals[statName].max ?? undefined}
+            onMinChange={(value) => handleMinChange(statName, value)}
+            onMaxChange={(value) => handleMaxChange(statName, value)}
+            onMinMaxChange={(min, max) =>
+              handleMinMaxChange(statName, min, max)
+            }
+            onRankChange={(value) => handleRankChange(statName, value)}
+          />
+        ))}
       </div>
     </div>
   );

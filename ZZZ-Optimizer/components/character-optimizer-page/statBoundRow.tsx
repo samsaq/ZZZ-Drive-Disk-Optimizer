@@ -9,6 +9,7 @@ interface StatBoundRowProps {
   onMinChange?: (min: number | null) => void;
   onMaxChange?: (max: number | null) => void;
   onRankChange?: (rank: number) => void;
+  onMinMaxChange?: (min: number | null, max: number | null) => void;
 }
 
 export default function StatBoundRow({
@@ -19,6 +20,7 @@ export default function StatBoundRow({
   onMinChange,
   onMaxChange,
   onRankChange,
+  onMinMaxChange,
 }: Readonly<StatBoundRowProps>) {
   const [showMin, setShowMin] = useState(defaultMin !== undefined);
   const [showMax, setShowMax] = useState(defaultMax !== undefined);
@@ -55,8 +57,9 @@ export default function StatBoundRow({
             onClick={() => {
               setShowMin(true);
               setShowMax(true);
-              onMinChange?.(defaultMin ?? 0);
-              onMaxChange?.(defaultMax ?? 0);
+              if (onMinMaxChange) {
+                onMinMaxChange(0, 0);
+              }
             }}
             className="flex h-10 w-10 items-center justify-center border border-white text-3xl"
           >
@@ -95,7 +98,7 @@ export default function StatBoundRow({
           <span>Min:</span>
           <input
             type="number"
-            defaultValue={defaultMin}
+            value={defaultMin ?? ""}
             onChange={(e) => onMinChange?.(Number(e.target.value))}
             className="border-b border-white text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             style={{ width: `${maxChars}ch` }}
@@ -117,7 +120,7 @@ export default function StatBoundRow({
           <span>Max:</span>
           <input
             type="number"
-            defaultValue={defaultMax}
+            value={defaultMax ?? ""}
             onChange={(e) => onMaxChange?.(Number(e.target.value))}
             className="border-b border-white text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
             style={{ width: `${maxChars}ch` }}
