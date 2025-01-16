@@ -9,13 +9,13 @@ import { DiscordIcon } from "../icons/DiscordIcon";
 import { GithubIcon } from "../icons/GithubIcon";
 import { RedditIcon } from "../icons/RedditIcon";
 import { GoogleIcon } from "../icons/GoogleIcon";
+import { PixelatedRefreshIcon } from "../icons/PixelatedRefreshIcon";
 
 import { siteConfig } from "@/config/site";
 import { OSWindow } from "@/components/OSWindow";
 import { DuotoneIcon } from "@/components/DuotoneIcon";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
 import { initialSync, pageTitle } from "@/atomsAndStores/atoms";
-import { PixelatedRefreshIcon } from "../icons/PixelatedRefreshIcon";
 
 export const NavBar = () => {
   const { data: session } = useSession();
@@ -63,6 +63,7 @@ export const NavBar = () => {
       method: "POST",
     });
     const loginData = await loginResponse.json();
+
     if (loginData.error) {
       console.error("Failed to login:", loginData.error);
     } else {
@@ -91,7 +92,7 @@ export const NavBar = () => {
             className="cursor-pointer transition-opacity hover:opacity-75"
             href="/"
           >
-            <Icon icon="game-icons:tv" width={56} height={56} />
+            <Icon height={56} icon="game-icons:tv" width={56} />
           </a>
         ) : (
           <a
@@ -108,8 +109,9 @@ export const NavBar = () => {
         </div>
       )}
       {session?.user && hasLocalData && (
-        <div
-          className="absolute right-[7vw] top-[7.25vh] cursor-pointer transition-opacity hover:opacity-75"
+        <button
+          aria-label="Sync data"
+          className="absolute right-[7vw] top-[7.25vh] transition-opacity hover:opacity-75"
           style={{ width: 56, height: 56 }}
           onClick={() => {
             fetchAndSyncScanData().catch((error) => {
@@ -118,7 +120,7 @@ export const NavBar = () => {
           }}
         >
           <PixelatedRefreshIcon size={56} />
-        </div>
+        </button>
       )}
       <div
         ref={loginButtonRef}
@@ -137,8 +139,8 @@ export const NavBar = () => {
       </div>
       {isLoginModalOpen && (
         <OSWindow
-          isOpen={isLoginModalOpen}
           id="loginModal"
+          isOpen={isLoginModalOpen}
           overrideMinWidth={200}
           position={{
             targetRef: loginButtonRef,
