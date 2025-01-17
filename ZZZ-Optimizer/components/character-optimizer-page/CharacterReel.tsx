@@ -3,6 +3,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import DuotoneTab from "./duotoneTab";
 import ImageTab from "./imageTab";
 import { Factions } from "@/lib/agentStats";
+import { useOptimizer } from "@/components/character-optimizer-page/optimizerContext";
+import { agentStats } from "@/lib/agentStats";
 
 interface CharacterReelProps {
   forwardOnly?: boolean;
@@ -15,9 +17,10 @@ export default function CharacterReel({
   useImageTabs = false,
   onLevelChange,
 }: Readonly<CharacterReelProps>) {
-  // Remove the factionFolders constant and use imported Factions instead
   const factionFolders = Factions;
   const noCharacterImage = "/ZZZ-Agent-Images/No_Char.png";
+
+  const { selectedAgent, setSelectedAgent } = useOptimizer();
 
   const [selectedFaction, setSelectedFaction] = React.useState<string>(
     Object.keys(factionFolders)[0],
@@ -51,16 +54,35 @@ export default function CharacterReel({
         if (currentLevel > newMax) {
           setCurrentLevel(newMax);
           onLevelChange?.(newMax, newMax);
+          if (selectedAgent) {
+            setSelectedAgent({
+              ...selectedAgent,
+              agentLevel: newMax,
+              agentMaxLevel: newMax,
+            });
+          }
         } else {
           onLevelChange?.(newMax, currentLevel);
+          if (selectedAgent) {
+            setSelectedAgent({
+              ...selectedAgent,
+              agentLevel: newMax,
+            });
+          }
         }
       }
       if (newCurrent !== null && newCurrent <= maxLevel) {
         setCurrentLevel(newCurrent);
         onLevelChange?.(maxLevel, newCurrent);
+        if (selectedAgent) {
+          setSelectedAgent({
+            ...selectedAgent,
+            agentLevel: newCurrent,
+          });
+        }
       }
     },
-    [currentLevel, maxLevel, onLevelChange],
+    [currentLevel, maxLevel, selectedAgent],
   );
 
   // Handle faction selection via tabs
@@ -68,7 +90,6 @@ export default function CharacterReel({
     (clickedFaction: string) => {
       if (!emblaApi) return;
 
-      // Skip if we're already on the selected faction
       if (clickedFaction === selectedFaction) return;
 
       const factions = Object.keys(factionFolders);
@@ -251,6 +272,14 @@ export default function CharacterReel({
                               src={`/ZZZ-Agent-Images/${faction}/${image}`}
                               alt={`${faction} character`}
                               className="relative z-10 h-16 w-16 select-none object-cover"
+                              role="button"
+                              tabIndex={0}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                  e.preventDefault();
+                                  e.currentTarget.click();
+                                }
+                              }}
                               onError={(e) => {
                                 e.currentTarget.src = noCharacterImage;
                               }}
@@ -260,6 +289,39 @@ export default function CharacterReel({
                                   ? null
                                   : characterName;
                                 setSelectedCharacter(newCharacterName);
+
+                                if (newCharacterName) {
+                                  // Case-insensitive partial name matching since file names aren't always the same
+                                  const agentData = agentStats.find((a) => {
+                                    const searchName =
+                                      newCharacterName.toLowerCase();
+                                    const fullName = a.name.toLowerCase();
+                                    const briefName =
+                                      a.briefName?.toLowerCase();
+
+                                    return (
+                                      fullName.includes(searchName) ||
+                                      (briefName &&
+                                        briefName.includes(searchName))
+                                    );
+                                  });
+
+                                  setSelectedAgent(
+                                    agentData
+                                      ? {
+                                          agentStats: agentData,
+                                          agentLevel: currentLevel,
+                                          agentMaxLevel: maxLevel,
+                                        }
+                                      : null,
+                                  );
+                                } else {
+                                  setSelectedAgent(null);
+                                  console.log(
+                                    "selected agent is null with name: ",
+                                    newCharacterName,
+                                  );
+                                }
 
                                 if (newCharacterName) {
                                   const characterFaction =

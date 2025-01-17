@@ -4,8 +4,8 @@ import { DiskDriveSet } from "@/lib/diskStats";
 import { WEngineStats } from "@/lib/WEngineStats";
 import { OptimizerReport } from "@/components/character-optimizer-page/optimizerReport";
 import { DiskWheelProps } from "@/components/character-optimizer-page/diskWheel";
-import { useScanStore } from "@/atomsAndStores/useScanStore";
-interface PartitionSetting {
+import { AgentStats } from "@/lib/agentStats";
+export interface PartitionSetting {
   id: string;
   groupID?: string;
   label: string;
@@ -16,6 +16,12 @@ interface StatRowData {
   min: number | null; //when null, we don't care about this stat (no min or max, will trigger a warning)
   max: number | null;
   rank: number | null; //when null, treat as lowest priority to optimize for, trigger a warning
+}
+
+export interface Agent {
+  agentStats: AgentStats;
+  agentLevel: number;
+  agentMaxLevel: number;
 }
 
 export const OPTIMIZER_STATS = [
@@ -76,6 +82,10 @@ interface OptimizerContextType {
     settingId: string,
     enabled: boolean,
   ) => void;
+
+  // Selected Agent State
+  selectedAgent: Agent | null;
+  setSelectedAgent: (agent: Agent | null) => void;
 }
 
 const OptimizerContext = createContext<OptimizerContextType | undefined>(
@@ -89,6 +99,7 @@ export function OptimizerProvider({
   const [selectedWEngine, setSelectedWEngine] = useState<WEngineStats | null>(
     null,
   );
+  const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null);
   const [selectedDisk, setSelectedDisk] = useState<DiskScan | null>(null);
   const [selectedSets, setSelectedSets] = useState<
     (DiskDriveSet | undefined)[]
@@ -220,6 +231,8 @@ export function OptimizerProvider({
       updatePartitionSetting,
       diskWheelResultDisks,
       setDiskWheelResultDisks,
+      selectedAgent,
+      setSelectedAgent,
     }),
     [
       selectedWEngine,
@@ -230,6 +243,7 @@ export function OptimizerProvider({
       diskPlatingReccomendations,
       partitionSettings,
       diskWheelResultDisks,
+      selectedAgent,
     ],
   );
 
