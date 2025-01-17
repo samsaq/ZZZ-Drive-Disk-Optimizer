@@ -89,14 +89,14 @@ export const NavBar = () => {
       <div className="absolute left-[4vw] top-[7.5vh]">
         {currentPageTitle === "Character Optimizer" ? (
           <a
-            className="cursor-pointer transition-opacity hover:opacity-75"
+            className="localEffectCRT relative z-10 flex h-[56px] w-[56px] cursor-pointer items-center justify-center transition-opacity hover:opacity-75"
             href="/"
           >
             <Icon height={56} icon="game-icons:tv" width={56} />
           </a>
         ) : (
           <a
-            className="cursor-pointer transition-opacity hover:opacity-75"
+            className="localEffectCRT relative z-10 flex h-[48px] w-[48px] cursor-pointer items-center justify-center transition-opacity hover:opacity-75"
             href={siteConfig.links.github}
           >
             <GithubIcon size={48} />
@@ -111,7 +111,7 @@ export const NavBar = () => {
       {session?.user && hasLocalData && (
         <button
           aria-label="Sync data"
-          className="absolute right-[7vw] top-[7.25vh] transition-opacity hover:opacity-75"
+          className="localEffectCRT absolute right-[7vw] top-[7.25vh] z-10 transition-opacity hover:opacity-75"
           style={{ width: 56, height: 56 }}
           onClick={() => {
             fetchAndSyncScanData().catch((error) => {
@@ -128,7 +128,7 @@ export const NavBar = () => {
         title={session?.user ? "Logout" : "Login"}
       >
         <Icon
-          className="cursor-pointer transition-opacity hover:opacity-75"
+          className="localEffectCRT z-10 cursor-pointer transition-opacity hover:opacity-75"
           height={48}
           icon={session?.user ? "memory:logout" : "memory:login"}
           width={48}

@@ -1,9 +1,7 @@
-import "@/styles/altCRTEffect.css";
+import "@/styles/CRTEffect.css";
 
 export default function CRTEffect({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <div className="bgEffectCRT w-full h-full min-h-full ">{children}</div>
-  );
+  return <div className="bgEffectCRT h-full min-h-full w-full">{children}</div>;
 }
