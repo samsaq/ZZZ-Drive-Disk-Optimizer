@@ -127,15 +127,17 @@ export const NavBar = () => {
         className="absolute right-[4vw] top-[7.5vh]"
         title={session?.user ? "Logout" : "Login"}
       >
-        <Icon
-          className="localEffectCRT z-10 cursor-pointer transition-opacity hover:opacity-75"
-          height={48}
-          icon={session?.user ? "memory:logout" : "memory:login"}
-          width={48}
-          onClick={
-            session?.user ? handleLogout : () => setIsLoginModalOpen(true)
-          }
-        />
+        <div className="localEffectCRT z-10">
+          <Icon
+            className="cursor-pointer transition-opacity hover:opacity-75"
+            height={48}
+            icon={session?.user ? "memory:logout" : "memory:login"}
+            width={48}
+            onClick={
+              session?.user ? handleLogout : () => setIsLoginModalOpen(true)
+            }
+          />
+        </div>
       </div>
       {isLoginModalOpen && (
         <OSWindow
