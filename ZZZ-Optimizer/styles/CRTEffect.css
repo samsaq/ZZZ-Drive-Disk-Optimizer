@@ -1,0 +1,166 @@
+/*Based off of https://github.com/kranachan/escapeland's work */
+
+:root {
+  --crt-rgb-intensity: 0.02; /* intensity value for horizontal scanlines' color separation */
+  --crt-bw-intensity: 0.15; /* intensity value for vertical scanlines' black-white banding */
+  --crt-flicker-intensity: 0.1; /* intensity value for flicker effect */
+  --crt-vert-scanline-size: 2vh; /* size of vertical scanlines */
+  --crt-horz-scanline-size: 2vh; /* size of horizontal scanlines */
+  --crt-blur-intensity: 4px; /* intensity value for blur effect */
+  --crt-color-seperation-offset: 0.825px; /* offset value for color seperation effect */
+}
+
+.bgEffectCRT {
+  text-shadow: /* text shadow used to create the glow / color separation effect */
+    var(--crt-color-seperation-offset) 0 var(--crt-blur-intensity)
+      rgba(0, 30, 255, 0.5),
+    calc(var(--crt-color-seperation-offset) * -1) 0 var(--crt-blur-intensity)
+      rgba(255, 0, 80, 0.3),
+    0 0 calc(var(--crt-blur-intensity) * 0.5) rgba(0, 0, 0, 0.1);
+
+  &::before,
+  &::after {
+    @apply fixed z-10 block content-[''];
+    @apply bottom-0 left-0 right-0 top-0;
+    @apply pointer-events-none;
+  }
+
+  &::before {
+    background: linear-gradient(
+        /* used to create the horizontal color bands, black and white */
+          rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, calc(var(--crt-bw-intensity))) 50%
+      ),
+      linear-gradient(
+        /* used to create the vertical color bands */ 90deg,
+        rgba(255, 0, 0, calc(var(--crt-rgb-intensity))),
+        rgba(0, 255, 0, calc(var(--crt-rgb-intensity) * 0.33)),
+        /* slightly less green */
+          rgba(0, 0, 255, calc(var(--crt-rgb-intensity)))
+      );
+    background-size: /* size of the lines, vertical and horizontal */
+      100% var(--crt-horz-scanline-size),
+      var(--crt-vert-scanline-size) 100%;
+    animation: scanlines 0.5s linear infinite; /* Add animation for scanning effect */
+  }
+
+  @keyframes scanlines {
+    from {
+      background-position:
+        0 0,
+        0 0;
+    }
+    to {
+      background-position:
+        0 var(--crt-horz-scanline-size),
+        0 0; /* Negative value to move down (X, Y) - set to size of scanlines */
+    }
+  }
+
+  &::after {
+    /* flicker effect */
+    @apply opacity-0;
+
+    background: rgba(18, 16, 16, calc(var(--crt-flicker-intensity)));
+  }
+}
+
+.windowCRTEffect {
+  /* Copy the same styles as bgEffectCRT but with absolute positioning */
+  position: fixed;
+  text-shadow:
+    var(--crt-color-seperation-offset) 0 var(--crt-blur-intensity)
+      rgba(0, 30, 255, 0.5),
+    calc(var(--crt-color-seperation-offset) * -1) 0 var(--crt-blur-intensity)
+      rgba(255, 0, 80, 0.3),
+    0 0 calc(var(--crt-blur-intensity) * 0.5) rgba(0, 0, 0, 0.1);
+
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    @apply absolute z-10 block content-[''];
+    @apply bottom-0 left-0 right-0 top-0;
+    @apply pointer-events-none;
+  }
+
+  &::before {
+    background: linear-gradient(
+        /* used to create the horizontal color bands, black and white */
+          rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, calc(var(--crt-bw-intensity))) 50%
+      ),
+      linear-gradient(
+        /* used to create the vertical color bands */ 90deg,
+        rgba(255, 0, 0, calc(var(--crt-rgb-intensity))),
+        rgba(0, 255, 0, calc(var(--crt-rgb-intensity) * 0.33)),
+        /* slightly less green */
+          rgba(0, 0, 255, calc(var(--crt-rgb-intensity)))
+      );
+    background-size: /* size of the lines, vertical and horizontal */
+      100% var(--crt-horz-scanline-size),
+      var(--crt-vert-scanline-size) 100%;
+    animation: scanlines 0.5s linear infinite; /* Add animation for scanning effect */
+  }
+
+  @keyframes scanlines {
+    from {
+      background-position:
+        0 0,
+        0 0;
+    }
+    to {
+      background-position:
+        0 var(--crt-horz-scanline-size),
+        0 0; /* Negative value to move down (X, Y) - set to size of scanlines */
+    }
+  }
+
+  &::after {
+    /* flicker effect */
+    @apply opacity-0;
+
+    background: rgba(18, 16, 16, calc(var(--crt-flicker-intensity)));
+  }
+}
+/* Local CRT effect - Used for components that cannot be affected by the global CRT effect*/
+.localEffectCRT {
+  text-shadow:
+    var(--crt-color-seperation-offset) 0 var(--crt-blur-intensity)
+      rgba(0, 30, 255, 0.5),
+    calc(var(--crt-color-seperation-offset) * -1) 0 var(--crt-blur-intensity)
+      rgba(255, 0, 80, 0.3),
+    0 0 calc(var(--crt-blur-intensity) * 0.5) rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  &::before,
+  &::after {
+    @apply absolute block content-[''];
+    @apply bottom-0 left-0 right-0 top-0;
+    @apply pointer-events-none;
+  }
+
+  &::before {
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, calc(var(--crt-bw-intensity))) 50%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, calc(var(--crt-rgb-intensity))),
+        rgba(0, 255, 0, calc(var(--crt-rgb-intensity) * 0.33)),
+        rgba(0, 0, 255, calc(var(--crt-rgb-intensity)))
+      );
+    background-size:
+      100% var(--crt-horz-scanline-size),
+      var(--crt-vert-scanline-size) 100%;
+    animation: scanlines 0.5s linear infinite;
+  }
+
+  &::after {
+    @apply opacity-0;
+    background: rgba(18, 16, 16, calc(var(--crt-flicker-intensity)));
+  }
+}

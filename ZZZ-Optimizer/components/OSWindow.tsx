@@ -4,10 +4,11 @@ import React, { useState, useRef, useEffect } from "react";
 import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { useWindowStore } from "@/atomsAndStores/windowStore";
 
 //Creates a window that is draggable in the style of a OS program to serve as an aesthetically appropriate modal
 
-interface Position {
+export interface Position {
   x: number;
   y: number;
 }
@@ -15,7 +16,7 @@ interface Position {
 type AnchorPoint = "start" | "center" | "end";
 type Direction = "top" | "right" | "bottom" | "left";
 
-interface RelativePosition {
+export interface RelativePosition {
   targetRef: React.RefObject<HTMLElement>;
   direction: Direction;
   anchor: AnchorPoint;
@@ -23,6 +24,7 @@ interface RelativePosition {
 }
 
 interface OSWindowProps {
+  id: string;
   title: string;
   isOpen: boolean;
   onClose: () => void;
@@ -33,10 +35,26 @@ interface OSWindowProps {
   titleClassName?: string;
   titleBarClassName?: string;
   closeButtonClassName?: string;
-  overrideMinWidth?: number;
+  overrideMinWidth?: number | "fit-content";
+}
+
+function getAbsolutePosition(element: HTMLElement) {
+  const rect = element.getBoundingClientRect();
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  return {
+    top: rect.top + scrollTop,
+    left: rect.left + scrollLeft,
+    width: rect.width,
+    height: rect.height,
+    bottom: rect.bottom + scrollTop,
+    right: rect.right + scrollLeft,
+  };
 }
 
 export function OSWindow({
+  id,
   title,
   isOpen,
   onClose,
@@ -49,6 +67,13 @@ export function OSWindow({
   closeButtonClassName,
   overrideMinWidth,
 }: Readonly<OSWindowProps>) {
+  const {
+    addWindow,
+    removeWindow,
+    bringToFront,
+    getWindowZIndex,
+    getTopWindow,
+  } = useWindowStore();
   const [windowPosition, setWindowPosition] =
     useState<Position>(defaultPosition);
   const [isDragging, setIsDragging] = useState(false);
@@ -56,6 +81,9 @@ export function OSWindow({
   const [isInitialized, setIsInitialized] = useState(false);
   const [isPositioned, setIsPositioned] = useState(false); // tracks if the window has completed initial positioning
   const windowRef = useRef<HTMLDivElement>(null);
+
+  // Check if we're in a browser environment
+  const isBrowser = typeof window !== "undefined";
 
   // Center the window on mount
   useEffect(() => {
@@ -96,10 +124,9 @@ export function OSWindow({
     };
   }, [isDragging, dragOffset]);
 
-  // Update positioning logic
+  // Update positioning logic with browser check
   useEffect(() => {
-    if (!windowRef.current) return;
-    setIsPositioned(false); // Reset positioned state when position prop changes
+    if (!isBrowser || !windowRef.current || isPositioned) return;
 
     const windowRect = windowRef.current.getBoundingClientRect();
 
@@ -114,8 +141,11 @@ export function OSWindow({
     }
 
     if ("x" in position) {
-      // Handle absolute positioning
-      setWindowPosition(position);
+      // Handle absolute positioning - centered on the provided coordinates
+      setWindowPosition({
+        x: position.x - windowRect.width / 2,
+        y: position.y - windowRect.height / 2,
+      });
       setIsPositioned(true);
       return;
     }
@@ -125,6 +155,9 @@ export function OSWindow({
     if (!targetRef.current) return;
 
     const targetRect = targetRef.current.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
     let x = 0;
     let y = 0;
 
@@ -188,39 +221,79 @@ export function OSWindow({
         break;
     }
 
+    // Constrain to viewport
+    x = Math.max(0, Math.min(x, viewportWidth - windowRect.width));
+    y = Math.max(0, Math.min(y, viewportHeight - windowRect.height));
+
     setWindowPosition({ x, y });
     setIsPositioned(true);
-  }, [position, windowRef.current]);
+  }, [position, defaultPosition, isBrowser]);
+
+  // Add window to store when mounted and remove when unmounted
+  useEffect(() => {
+    if (isOpen) {
+      addWindow(id);
+    }
+    return () => {
+      removeWindow(id);
+    };
+  }, [id, isOpen]);
+
+  // Bring window to front when clicked
+  const handleWindowClick = () => {
+    bringToFront(id);
+  };
+
+  // Add ESC key handler
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        const topWindow = getTopWindow();
+        if (topWindow?.id === id) {
+          onClose();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleEscKey);
+    return () => window.removeEventListener("keydown", handleEscKey);
+  }, [id, onClose, getTopWindow]);
 
   if (!isOpen) return null;
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    bringToFront(id);
     if (windowRef.current) {
       const rect = windowRef.current.getBoundingClientRect();
-
       setDragOffset({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
       });
       setIsDragging(true);
+      e.stopPropagation(); // Prevent event bubbling
     }
   };
 
-  const minWidth = overrideMinWidth ?? 300;
+  const minWidthStyle =
+    overrideMinWidth === "fit-content"
+      ? undefined
+      : `${overrideMinWidth ?? 300}px`;
 
   return (
     <div
       ref={windowRef}
       className={cn(
-        "windowCRTEffect fixed z-[30] border-2 border-gray-300 bg-background shadow-lg",
+        "windowCRTEffect fixed transform-none border-2 border-gray-300 bg-background shadow-lg",
         className,
         !isPositioned && "opacity-0", // Hide window until positioned
       )}
       style={{
         left: `${windowPosition.x}px`,
         top: `${windowPosition.y}px`,
-        minWidth: `${minWidth}px`,
+        minWidth: minWidthStyle,
+        zIndex: getWindowZIndex(id),
       }}
+      onClick={handleWindowClick}
     >
       {/* Title Bar */}
       <div

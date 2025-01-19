@@ -1,0 +1,2 @@
+Most images are from the ZZZ Official site (inspect element -> grab CDN link)
+Any that aren't are snipped and cleaned from the game itself

@@ -1,6 +1,11 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { z } from "zod";
+import {
+  valid_set_names,
+  valid_base_stats,
+  valid_random_stats,
+} from "./diskStats";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -10,53 +15,6 @@ export function cn(...inputs: ClassValue[]) {
 export interface ScanData {
   disk_scans: DiskScan[];
 }
-
-const valid_set_names = [
-  "Swing Jazz",
-  "Chaotic Metal",
-  "Hormone Punk",
-  "Fanged Metal",
-  "Shockstar Disco",
-  "Thunder Metal",
-  "Woodpecker Electro",
-  "Soul Rock",
-  "Puffer Electro",
-  "Inferno Metal",
-  "Freedom Blues",
-  "Polar Metal",
-  "Astral Voice",
-  "Branch & Blade Song",
-  "Chaos Jazz",
-  "Proto Punk",
-];
-
-const valid_base_stats = [
-  "HP",
-  "ATK",
-  "DEF",
-  "CRIT Rate",
-  "CRIT DMG",
-  "Anomaly Proficiency",
-  "PEN Ratio",
-  "Physical DMG Bonus",
-  "Fire DMG Bonus",
-  "Ice DMG Bonus",
-  "Electric DMG Bonus",
-  "Ether DMG Bonus",
-  "Anomaly Mastery",
-  "Impact",
-  "Energy Regen",
-];
-
-const valid_random_stats = [
-  "HP",
-  "ATK",
-  "DEF",
-  "CRIT Rate",
-  "CRIT DMG",
-  "Anomaly Proficiency",
-  "PEN",
-];
 
 export const DiskScanSchema = z.object({
   set_name: z.enum(valid_set_names as [string, ...string[]]),

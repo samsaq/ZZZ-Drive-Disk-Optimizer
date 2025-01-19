@@ -5,10 +5,10 @@ import localFont from "next/font/local";
 
 import { Providers } from "./providers";
 
-import { NavBar } from "@/components/navBar";
+import { NavBar } from "@/components/layout/navBar";
 import { siteConfig } from "@/config/site";
-import CRTOverlay from "@/components/CRTOverlay";
-import CRTEffect from "@/components/CRTEffect";
+import CRTOverlay from "@/components/layout/CRTOverlay";
+import CRTEffect from "@/components/layout/CRTEffect";
 import AuthProvider from "@/components/providers/AuthProvider";
 
 export const metadata: Metadata = {
@@ -56,8 +56,8 @@ export default function RootLayout({
           <AuthProvider>
             <CRTEffect>
               <div className="relative flex h-screen flex-col">
+                <NavBar />
                 <main className="container mx-auto max-w-7xl flex-grow px-6 py-10">
-                  <NavBar />
                   <div className={`relative h-full w-full`}>{children}</div>
                 </main>
               </div>
