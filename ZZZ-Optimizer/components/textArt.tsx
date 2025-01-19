@@ -8,7 +8,7 @@ export function TextArt({ label, text, className }: TextArtProps) {
   return (
     <pre
       aria-label={label}
-      className={className + " font-mono overflow-auto whitespace-pre"}
+      className={className + " overflow-auto whitespace-pre font-mono"}
     >
       {text}
     </pre>

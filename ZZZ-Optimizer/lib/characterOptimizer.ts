@@ -1,3 +1,5 @@
+"use client";
+
 //code to optimize character for given stat goals, accounting for disk constraints, chosen wengine, and disk setup
 //will also generate a sorted list of unplated (unleveled) disks that are ideal to level up for these goals
 //used by the optimize button using the optimizerContext's data
@@ -54,7 +56,7 @@ export function characterOptimize(
     if (disk.partition_number === "5") {
       if (partition5ElementalDmgConstraint) {
         // Check if disk's elemental DMG matches agent's element
-        return disk.drive_base_stat.includes(agent.element);
+        return disk.drive_base_stat.includes(agent.agentStats.element);
       }
       if (partition5PENRatioConstraint) {
         return disk.drive_base_stat === "PEN Ratio";
@@ -65,4 +67,14 @@ export function characterOptimize(
   });
 
   //if diskSetup is not undefined, filter the diskScans to only include disks that are in the diskSetup
+
+  //temp, return an empty characterOptimizerResult
+  return {
+    diskWheelResultDisks: [] as DiskWheelProps,
+    diskPlatingReccomendations: [],
+    report: {
+      errors: [],
+      warnings: [],
+    },
+  };
 }

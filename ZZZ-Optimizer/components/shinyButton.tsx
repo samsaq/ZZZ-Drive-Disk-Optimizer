@@ -23,7 +23,7 @@ export const ShinyButton = ({
 
   return (
     <button
-      className={`bg-black text-white border-2 border-white font-bold mt-2 py-2 px-4 rounded-none overflow-hidden relative ${shinyStyles.shineButton} ${shinyStyles.animateShine}`}
+      className={`relative mt-2 overflow-hidden rounded-none border-2 border-white bg-black px-4 py-2 font-bold text-white ${shinyStyles.shineButton} ${shinyStyles.animateShine}`}
       onClick={handleClick}
     >
       <span className={textClasses}>{text}</span>

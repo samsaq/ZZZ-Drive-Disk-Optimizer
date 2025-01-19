@@ -91,8 +91,10 @@ export default function DiskSetupSelector() {
         onClose={() => setIsSetSelectorOpen(false)}
         onSetSelect={handleSetSelect}
         position={{
-          x: window.innerWidth / 2,
-          y: window.innerHeight / 2,
+          targetRef: setSelectorRef,
+          direction: "left",
+          anchor: "center",
+          offset: 20,
         }}
       />
     </div>

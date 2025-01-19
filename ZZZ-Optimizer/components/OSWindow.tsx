@@ -80,7 +80,7 @@ export function OSWindow({
   const [dragOffset, setDragOffset] = useState<Position>({ x: 0, y: 0 });
   const [isInitialized, setIsInitialized] = useState(false);
   const [isPositioned, setIsPositioned] = useState(false); // tracks if the window has completed initial positioning
-  const windowRef = useRef<HTMLDivElement>(null);
+  const windowRef = useRef<HTMLButtonElement>(null);
 
   // Check if we're in a browser environment
   const isBrowser = typeof window !== "undefined";
@@ -280,7 +280,7 @@ export function OSWindow({
       : `${overrideMinWidth ?? 300}px`;
 
   return (
-    <div
+    <button
       ref={windowRef}
       className={cn(
         "windowCRTEffect fixed transform-none border-2 border-gray-300 bg-background shadow-lg",
@@ -324,6 +324,6 @@ export function OSWindow({
 
       {/* Window Content */}
       <div className="p-4">{children}</div>
-    </div>
+    </button>
   );
 }

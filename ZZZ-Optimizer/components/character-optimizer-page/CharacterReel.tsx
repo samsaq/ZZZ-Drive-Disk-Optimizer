@@ -268,22 +268,10 @@ export default function CharacterReel({
                                   : `${primaryColor}60`,
                               }}
                             />
-                            <img
-                              src={`/ZZZ-Agent-Images/${faction}/${image}`}
-                              alt={`${faction} character`}
-                              className="relative z-10 h-16 w-16 select-none object-cover"
-                              role="button"
-                              tabIndex={0}
-                              onKeyDown={(e) => {
-                                if (e.key === "Enter" || e.key === " ") {
-                                  e.preventDefault();
-                                  e.currentTarget.click();
-                                }
-                              }}
-                              onError={(e) => {
-                                e.currentTarget.src = noCharacterImage;
-                              }}
-                              draggable={false}
+
+                            <button
+                              type="button"
+                              className="relative z-10 h-16 w-16"
                               onClick={() => {
                                 const newCharacterName = isSelected
                                   ? null
@@ -331,7 +319,17 @@ export default function CharacterReel({
                                   }
                                 }
                               }}
-                            />
+                            >
+                              <img
+                                src={`/ZZZ-Agent-Images/${faction}/${image}`}
+                                alt={`${faction} character`}
+                                className="h-full w-full select-none object-cover"
+                                onError={(e) => {
+                                  e.currentTarget.src = noCharacterImage;
+                                }}
+                                draggable={false}
+                              />
+                            </button>
                           </div>
                         );
                       })}

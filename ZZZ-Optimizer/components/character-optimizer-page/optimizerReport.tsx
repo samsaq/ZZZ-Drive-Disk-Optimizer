@@ -28,7 +28,7 @@ export const OptimizerReport = ({ iconSize = 32 }: OptimizerReportProps) => {
 
   return (
     <>
-      <div
+      <button
         className="localEffectCRT absolute z-10 cursor-pointer" //Needed here to have the character optimizer page allow the report to be positioned in the diskwheel image
         onClick={() => setIsReportOpen(true)}
       >
@@ -60,7 +60,7 @@ export const OptimizerReport = ({ iconSize = 32 }: OptimizerReportProps) => {
             {hasErrors ? errors.length : 0}
           </span>
         </div>
-      </div>
+      </button>
 
       <OptimizerReportViewWindow
         id="optimizer-report"

@@ -111,7 +111,7 @@ export const NavBar = () => {
       {session?.user && hasLocalData && (
         <button
           aria-label="Sync data"
-          className="localEffectCRT absolute left-[86vw] top-[7vh] z-10 transition-opacity hover:opacity-75"
+          className="localEffectCRT absolute left-[88vw] top-[7vh] z-10 transition-opacity hover:opacity-75"
           style={{ width: 56, height: 56 }}
           onClick={() => {
             fetchAndSyncScanData().catch((error) => {
