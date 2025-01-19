@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 
 import { pageTitle } from "@/atomsAndStores/atoms";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
