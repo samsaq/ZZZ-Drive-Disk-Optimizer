@@ -1,4 +1,4 @@
-"use client";
+"use client ";
 
 import { pageTitle } from "@/atomsAndStores/atoms";
 import { useScanStore } from "@/atomsAndStores/useScanStore";
@@ -17,9 +17,9 @@ export default function CharacterOptimizer() {
   const router = useRouter();
   setPageTitle("Character Optimizer");
   //if we don't have local data, we need to redirect to the landing page
-  // if (!hasLocalData) {
-  //   router.push("/");
-  // }
+  if (!hasLocalData) {
+    router.push("/");
+  }
 
   return (
     <OptimizerProvider>
